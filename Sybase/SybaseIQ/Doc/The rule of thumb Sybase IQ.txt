@@ -1,0 +1,35 @@
+1. the general rule of thumb for Sybase IQ is a split of 40% for the main buffer cache and 60% for temp buffer cache.
+2. Block size
+All I/O occurs in units of blocks. The size of these blocks is set when you
+create a Sybase IQ database; you cannot change it without recreating the
+database. By default, the IQ page size determines the I/O transfer block size.
+For example, the default IQ page size of 128KB results in a default block size
+of 8192 bytes. In general, Sybase IQ uses this ratio of default block size to page
+size, but it considers other factors also.
+The default block size should result in an optimal balance of I/O transfer rate
+and disk space usage for most systems. It does favor saving space over
+performance.
+
+IQ page size (KB)               Default block size (bytes)
+64                               4096
+128 (default for new databases)  8192
+256                             16384
+512                             32768
+
+3. Getting information using stored procedures
+
+Sybase IQ offers several stored procedures that display information about your
+database:
+
+? sp_iqconnection displays statistics about user connections and versions
+? sp_iqcontext displays information about what statements are executing
+? sp_iqcheckdb checks the validity of your current database
+? sp_iqdbstatistics reports results of the most recent sp_iqcheckdb
+? sp_iqdbsize gives the size of the current database
+? sp_iqspaceinfo displays space usage by each object in the database
+? sp_iqstatus displays miscellaneous status information about the database.
+? sp_iqtablesize gives the size of the table you specify.
+? sp_iqgroupsize lists the members of the specified group.
+
+4. Monitoring the buffer caches
+
