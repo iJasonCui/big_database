@@ -1,0 +1,25 @@
+1. USE Sybase Power Designer 15 reverse engineering the database objects from Sybase 15.
+
+2. at PowerDesigner, do the "change current DBMS" from Sybase 15 into MySQL 5.0
+
+3. run "generate the database" from PowerDesigner
+
+4. save the database scripts as "crebas.sql"
+
+5. issues
+
+5.1 datetime default getdate() does not work on MySQL. you could use "TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
+    replace "getdate()" with "CURRENT_TIMESTAMP". But you have to change datetype from "datetime" into "timestamp"
+    it's important to note that datetime has a range of 1000-9999, but the range for timestamp is only 1970-2038.
+    this can be a problem if your system has to store birthdates, or you have to handle something like the payment
+    plan for a 30-year mortgage
+5.2 char and varchar over 255 does not supported by MySQL and use Text instead of varchar(255+)
+5.3 replace "dbo." with "" (empty string)
+5.4 replace "numeric" with "decimal"
+5.5 bigint not null auto_increment; decimal(12,0) does not match "auto_increment"
+
+6. execute the sql against MySQL server
+
+mysql -h 127.0.0.1 -P 4100 -D Plus45 < crebas_Plus45_NoDrop.sql 
+
+
