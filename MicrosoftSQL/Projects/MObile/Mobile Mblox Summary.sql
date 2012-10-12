@@ -1,8 +1,7 @@
 14. Mobile mBlox summary report
 
 http://reports.mblox.com
-User: LavalifeUS
-Pass: 3epuprAy
+
 
 14.1 After logging in, he would have clicked on “PSMS MT Breakdown”, 
 14.2 then selected the LavalifeUS account, 
