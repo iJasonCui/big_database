@@ -1,0 +1,506 @@
+DBCC results for 'acumen'.
+Service Broker Msg 9675, State 1: Message Types analyzed: 16.
+Service Broker Msg 9676, State 1: Service Contracts analyzed: 7.
+Service Broker Msg 9667, State 1: Services analyzed: 3.
+Service Broker Msg 9668, State 1: Service Queues analyzed: 3.
+Service Broker Msg 9669, State 1: Conversation Endpoints analyzed: 0.
+Service Broker Msg 9674, State 1: Conversation Groups analyzed: 0.
+Service Broker Msg 9670, State 1: Remote Service Bindings analyzed: 0.
+DBCC results for 'sys.sysrowsetcolumns'.
+There are 2805 rows in 41 pages for object "sys.sysrowsetcolumns".
+DBCC results for 'sys.sysrowsets'.
+There are 386 rows in 4 pages for object "sys.sysrowsets".
+DBCC results for 'sysallocunits'.
+There are 400 rows in 7 pages for object "sysallocunits".
+DBCC results for 'sys.sysfiles1'.
+There are 6 rows in 1 pages for object "sys.sysfiles1".
+DBCC results for 'sys.syshobtcolumns'.
+There are 2805 rows in 45 pages for object "sys.syshobtcolumns".
+DBCC results for 'sys.syshobts'.
+There are 386 rows in 3 pages for object "sys.syshobts".
+DBCC results for 'sys.sysftinds'.
+There are 0 rows in 0 pages for object "sys.sysftinds".
+DBCC results for 'sys.sysserefs'.
+There are 400 rows in 2 pages for object "sys.sysserefs".
+DBCC results for 'sys.sysowners'.
+There are 31 rows in 1 pages for object "sys.sysowners".
+DBCC results for 'sys.sysprivs'.
+There are 154 rows in 1 pages for object "sys.sysprivs".
+DBCC results for 'sys.sysschobjs'.
+There are 1090 rows in 23 pages for object "sys.sysschobjs".
+DBCC results for 'sys.syscolpars'.
+There are 3694 rows in 81 pages for object "sys.syscolpars".
+DBCC results for 'sys.sysnsobjs'.
+There are 1 rows in 1 pages for object "sys.sysnsobjs".
+DBCC results for 'sys.syscerts'.
+There are 0 rows in 0 pages for object "sys.syscerts".
+DBCC results for 'sys.sysxprops'.
+There are 352 rows in 63 pages for object "sys.sysxprops".
+DBCC results for 'sys.sysscalartypes'.
+There are 27 rows in 1 pages for object "sys.sysscalartypes".
+DBCC results for 'sys.systypedsubobjs'.
+There are 3 rows in 1 pages for object "sys.systypedsubobjs".
+DBCC results for 'sys.sysidxstats'.
+There are 1383 rows in 35 pages for object "sys.sysidxstats".
+DBCC results for 'sys.sysiscols'.
+There are 1440 rows in 13 pages for object "sys.sysiscols".
+DBCC results for 'sys.sysbinobjs'.
+There are 26 rows in 1 pages for object "sys.sysbinobjs".
+DBCC results for 'sys.sysobjvalues'.
+There are 2146 rows in 704 pages for object "sys.sysobjvalues".
+DBCC results for 'sys.sysclsobjs'.
+There are 30 rows in 1 pages for object "sys.sysclsobjs".
+DBCC results for 'sys.sysrowsetrefs'.
+There are 26 rows in 1 pages for object "sys.sysrowsetrefs".
+DBCC results for 'sys.sysremsvcbinds'.
+There are 0 rows in 0 pages for object "sys.sysremsvcbinds".
+DBCC results for 'sys.sysxmitqueue'.
+There are 0 rows in 1 pages for object "sys.sysxmitqueue".
+DBCC results for 'sys.sysrts'.
+There are 1 rows in 1 pages for object "sys.sysrts".
+DBCC results for 'sys.sysconvgroup'.
+There are 0 rows in 1 pages for object "sys.sysconvgroup".
+DBCC results for 'sys.sysdesend'.
+There are 0 rows in 1 pages for object "sys.sysdesend".
+DBCC results for 'sys.sysdercv'.
+There are 0 rows in 1 pages for object "sys.sysdercv".
+DBCC results for 'sys.syssingleobjrefs'.
+There are 251 rows in 1 pages for object "sys.syssingleobjrefs".
+DBCC results for 'sys.sysmultiobjrefs'.
+There are 1210 rows in 11 pages for object "sys.sysmultiobjrefs".
+DBCC results for 'sys.sysdbfiles'.
+There are 6 rows in 1 pages for object "sys.sysdbfiles".
+DBCC results for 'sys.sysguidrefs'.
+There are 2 rows in 1 pages for object "sys.sysguidrefs".
+DBCC results for 'sys.sysqnames'.
+There are 91 rows in 1 pages for object "sys.sysqnames".
+DBCC results for 'sys.sysxmlcomponent'.
+There are 93 rows in 1 pages for object "sys.sysxmlcomponent".
+DBCC results for 'sys.sysxmlfacet'.
+There are 97 rows in 1 pages for object "sys.sysxmlfacet".
+DBCC results for 'sys.sysxmlplacement'.
+There are 17 rows in 1 pages for object "sys.sysxmlplacement".
+DBCC results for 'sys.sysobjkeycrypts'.
+There are 2 rows in 1 pages for object "sys.sysobjkeycrypts".
+DBCC results for 'sys.sysasymkeys'.
+There are 0 rows in 0 pages for object "sys.sysasymkeys".
+DBCC results for 'sys.syssqlguides'.
+There are 0 rows in 0 pages for object "sys.syssqlguides".
+DBCC results for 'sys.sysbinsubobjs'.
+There are 0 rows in 0 pages for object "sys.sysbinsubobjs".
+DBCC results for 'dim.tAffiliate2'.
+There are 1264 rows in 30 pages for object "dim.tAffiliate2".
+DBCC results for 'dim.tTariff'.
+There are 49 rows in 1 pages for object "dim.tTariff".
+DBCC results for 'fact.tIvrSalesHistory'.
+There are 5071793 rows in 140894 pages for object "fact.tIvrSalesHistory".
+DBCC results for 'dim.tCountry'.
+There are 0 rows in 0 pages for object "dim.tCountry".
+DBCC results for 'dim.tMemberType'.
+There are 6 rows in 1 pages for object "dim.tMemberType".
+DBCC results for 'dim.tMemberDevice_bak'.
+There are 1486 rows in 32 pages for object "dim.tMemberDevice_bak".
+DBCC results for 'TempForSSRS'.
+There are 26 rows in 4 pages for object "TempForSSRS".
+DBCC results for 'fact.tSaleMessage'.
+There are 77644223 rows in 2549611 pages for object "fact.tSaleMessage".
+DBCC results for 'dim.tIvrCustomerByBrand'.
+There are 1959127 rows in 52246 pages for object "dim.tIvrCustomerByBrand".
+DBCC results for 'dim.tIvrCustomerByProductHistory'.
+There are 2878993 rows in 65452 pages for object "dim.tIvrCustomerByProductHistory".
+DBCC results for 'dim.tAccessMethod'.
+There are 6 rows in 1 pages for object "dim.tAccessMethod".
+DBCC results for 'dim.tPerfromanceCounter'.
+There are 10 rows in 1 pages for object "dim.tPerfromanceCounter".
+DBCC results for 'dim.tIvrNewUniqueByProduct'.
+There are 8464486 rows in 92282 pages for object "dim.tIvrNewUniqueByProduct".
+DBCC results for 'dim.tPerfromanceInstance'.
+There are 23 rows in 1 pages for object "dim.tPerfromanceInstance".
+DBCC results for 'dim.tPrice'.
+There are 9 rows in 1 pages for object "dim.tPrice".
+DBCC results for 'dim.tInterface_sb'.
+There are 3 rows in 1 pages for object "dim.tInterface_sb".
+DBCC results for 'dim.av_adcode_list'.
+There are 0 rows in 0 pages for object "dim.av_adcode_list".
+DBCC results for 'sysdiagrams'.
+There are 5 rows in 1 pages for object "sysdiagrams".
+DBCC results for 'dim.tAudioAdPlacement'.
+There are 7 rows in 1 pages for object "dim.tAudioAdPlacement".
+DBCC results for 'fact.tMessage'.
+There are 110451526 rows in 1781831 pages for object "fact.tMessage".
+DBCC results for 'fact.tIvrSales'.
+There are 20193956 rows in 806467 pages for object "fact.tIvrSales".
+DBCC results for 'dim.tCurrency'.
+There are 6 rows in 1 pages for object "dim.tCurrency".
+DBCC results for 'testAffiliate'.
+There are 0 rows in 0 pages for object "testAffiliate".
+DBCC results for 'dim.tNPA'.
+There are 252 rows in 7 pages for object "dim.tNPA".
+DBCC results for 'fact.tFeatureDuration'.
+There are 293258662 rows in 2572672 pages for object "fact.tFeatureDuration".
+DBCC results for 'dim.tPurchaseTransactionType'.
+There are 3 rows in 1 pages for object "dim.tPurchaseTransactionType".
+DBCC results for 'fact.tMenuUsage'.
+There are 0 rows in 0 pages for object "fact.tMenuUsage".
+DBCC results for 'dim.tPurchaseCategory'.
+There are 5 rows in 1 pages for object "dim.tPurchaseCategory".
+DBCC results for 'dim.tIvrNewUnique'.
+There are 8394845 rows in 109702 pages for object "dim.tIvrNewUnique".
+DBCC results for 'dim.tContract'.
+There are 59 rows in 1 pages for object "dim.tContract".
+DBCC results for 'fact.tSMSBlast'.
+There are 1234643 rows in 13875 pages for object "fact.tSMSBlast".
+DBCC results for 'dim.tMobileUnique'.
+There are 0 rows in 0 pages for object "dim.tMobileUnique".
+DBCC results for 'dim.tPurchaseType_Old'.
+There are 5 rows in 1 pages for object "dim.tPurchaseType_Old".
+DBCC results for 'dim.tDate'.
+There are 5114 rows in 30 pages for object "dim.tDate".
+DBCC results for 'fact.tIvrAudioAdLog'.
+There are 388 rows in 4 pages for object "fact.tIvrAudioAdLog".
+DBCC results for 'dim.tCallFlow'.
+There are 8 rows in 1 pages for object "dim.tCallFlow".
+DBCC results for 'dim.tDeckPlacement'.
+There are 33 rows in 1 pages for object "dim.tDeckPlacement".
+DBCC results for 'dim.tComposition'.
+There are 8 rows in 1 pages for object "dim.tComposition".
+DBCC results for 'dim.tPayoutRate'.
+There are 1258 rows in 6 pages for object "dim.tPayoutRate".
+DBCC results for 'dim.tService'.
+There are 6 rows in 1 pages for object "dim.tService".
+DBCC results for 'dim.tCheckStatus'.
+There are 8 rows in 1 pages for object "dim.tCheckStatus".
+DBCC results for 'dim.tOperatorConnectLocation'.
+There are 7 rows in 1 pages for object "dim.tOperatorConnectLocation".
+DBCC results for 'ShowPref'.
+There are 3 rows in 1 pages for object "ShowPref".
+DBCC results for 'dim.av_adcode_lookup'.
+There are 0 rows in 0 pages for object "dim.av_adcode_lookup".
+DBCC results for 'dim.tMailboxAccessed'.
+There are 4 rows in 1 pages for object "dim.tMailboxAccessed".
+DBCC results for 'fact.tMbloxSummary'.
+There are 282275 rows in 2898 pages for object "fact.tMbloxSummary".
+DBCC results for 'dim.tAudioAd'.
+There are 11 rows in 1 pages for object "dim.tAudioAd".
+DBCC results for 'dim.tMobileCustomer'.
+There are 3704246 rows in 27143 pages for object "dim.tMobileCustomer".
+DBCC results for 'fact.HiddenProfiles'.
+There are 2325838 rows in 13135 pages for object "fact.HiddenProfiles".
+DBCC results for 'fact.tEgainEmail'.
+There are 37993 rows in 4104 pages for object "fact.tEgainEmail".
+DBCC results for 'dim.tCommonTerms'.
+There are 23 rows in 1 pages for object "dim.tCommonTerms".
+DBCC results for 'dim.tAdcode'.
+There are 3038 rows in 98 pages for object "dim.tAdcode".
+DBCC results for 'dim.tWebCreditCard'.
+There are 2647962 rows in 46294 pages for object "dim.tWebCreditCard".
+DBCC results for 'dim.tOperatorConnectStatus'.
+There are 5 rows in 1 pages for object "dim.tOperatorConnectStatus".
+DBCC results for 'dim.tMessageAction'.
+There are 3 rows in 1 pages for object "dim.tMessageAction".
+DBCC results for 'dim.tMailboxByProduct'.
+There are 2691235 rows in 37677 pages for object "dim.tMailboxByProduct".
+DBCC results for 'dim.tCallCentre'.
+There are 496 rows in 4 pages for object "dim.tCallCentre".
+DBCC results for 'dim.tCallType'.
+There are 6 rows in 1 pages for object "dim.tCallType".
+DBCC results for 'fact.tWebSessionMember'.
+There are 31622294 rows in 216989 pages for object "fact.tWebSessionMember".
+DBCC results for 'dim.tIvrGeography'.
+There are 178 rows in 3 pages for object "dim.tIvrGeography".
+DBCC results for 'dim.tAdcodeSublevel'.
+There are 112 rows in 1 pages for object "dim.tAdcodeSublevel".
+DBCC results for 'fact.tMailbox'.
+There are 46885220 rows in 468089 pages for object "fact.tMailbox".
+DBCC results for 'dim.tAdcodeTitle'.
+There are 94 rows in 1 pages for object "dim.tAdcodeTitle".
+DBCC results for 'testPartition1'.
+There are 22 rows in 11 pages for object "testPartition1".
+DBCC results for 'dim.tIvrDID'.
+There are 45296 rows in 1275 pages for object "dim.tIvrDID".
+DBCC results for 'dim.tAffiliate'.
+There are 1351 rows in 28 pages for object "dim.tAffiliate".
+DBCC results for 'dim.tErrorCode'.
+There are 53 rows in 2 pages for object "dim.tErrorCode".
+DBCC results for 'fact.tWebMember'.
+There are 4634718 rows in 118802 pages for object "fact.tWebMember".
+DBCC results for 'dim.tCarrierMessage'.
+There are 268 rows in 8 pages for object "dim.tCarrierMessage".
+DBCC results for 'dim.tCouponType'.
+There are 8 rows in 1 pages for object "dim.tCouponType".
+DBCC results for 'dim.tProject'.
+There are 35 rows in 1 pages for object "dim.tProject".
+DBCC results for 'dim.tTestStatus'.
+There are 2 rows in 1 pages for object "dim.tTestStatus".
+DBCC results for 'dim.tIvrCustomerByBrandHistory'.
+There are 2775393 rows in 63098 pages for object "dim.tIvrCustomerByBrandHistory".
+DBCC results for 'dim.tGeography'.
+There are 2461644 rows in 24944 pages for object "dim.tGeography".
+DBCC results for 'dim.Cell'.
+There are 130 rows in 2 pages for object "dim.Cell".
+DBCC results for 'dim.tMenuFeature'.
+There are 81 rows in 3 pages for object "dim.tMenuFeature".
+DBCC results for 'dim.tShortCode'.
+There are 25 rows in 1 pages for object "dim.tShortCode".
+DBCC results for 'VCCallout'.
+There are 0 rows in 0 pages for object "VCCallout".
+DBCC results for 'dim.tAge'.
+There are 113 rows in 3 pages for object "dim.tAge".
+DBCC results for 'dim.tChargebackReason'.
+There are 241 rows in 6 pages for object "dim.tChargebackReason".
+DBCC results for 'dim.tSMSCampaign'.
+There are 206 rows in 12 pages for object "dim.tSMSCampaign".
+DBCC results for 'VCCalloutLog'.
+There are 0 rows in 0 pages for object "VCCalloutLog".
+DBCC results for 'dim.tMemberStatus'.
+There are 4 rows in 1 pages for object "dim.tMemberStatus".
+DBCC results for 'VoiceConnect'.
+There are 0 rows in 0 pages for object "VoiceConnect".
+DBCC results for 'dim.tPage'.
+There are 8896 rows in 216 pages for object "dim.tPage".
+DBCC results for 'dim.tLocale'.
+There are 10 rows in 1 pages for object "dim.tLocale".
+DBCC results for 'fact.ADS'.
+There are 144 rows in 2 pages for object "fact.ADS".
+DBCC results for 'dim.tDuration'.
+There are 17 rows in 1 pages for object "dim.tDuration".
+DBCC results for 'dim.tTime'.
+There are 1440 rows in 9 pages for object "dim.tTime".
+DBCC results for 'dim.tFirstTimePurchaserProgram'.
+There are 3 rows in 1 pages for object "dim.tFirstTimePurchaserProgram".
+DBCC results for 'fact.tIvrChargeback'.
+There are 45853 rows in 207 pages for object "fact.tIvrChargeback".
+DBCC results for 'dim.tMessageType'.
+There are 92 rows in 3 pages for object "dim.tMessageType".
+DBCC results for 'dim.tSequence'.
+There are 250002 rows in 1357 pages for object "dim.tSequence".
+DBCC results for 'dim.tPurchaseType'.
+There are 0 rows in 1 pages for object "dim.tPurchaseType".
+DBCC results for 'dim.tCVVResult'.
+There are 11 rows in 1 pages for object "dim.tCVVResult".
+DBCC results for 'fact.tComposition'.
+There are 4298250 rows in 22864 pages for object "fact.tComposition".
+DBCC results for 'fact.tFirstTimePurchaserMember'.
+There are 915 rows in 17 pages for object "fact.tFirstTimePurchaserMember".
+DBCC results for 'dim.tMessageStatus'.
+There are 39 rows in 1 pages for object "dim.tMessageStatus".
+DBCC results for 'fact.tWebCallMe'.
+There are 358169 rows in 3093 pages for object "fact.tWebCallMe".
+DBCC results for 'dim.tMobileNewUniqueByWap'.
+There are 8491663 rows in 68419 pages for object "dim.tMobileNewUniqueByWap".
+DBCC results for 'dim.tMobileProductUnique'.
+There are 3217321 rows in 140066 pages for object "dim.tMobileProductUnique".
+DBCC results for 'dim.tIvrOffer'.
+There are 11 rows in 1 pages for object "dim.tIvrOffer".
+DBCC results for 'dim.tConversationGroup'.
+There are 15 rows in 1 pages for object "dim.tConversationGroup".
+DBCC results for 'dim.tMsgState'.
+There are 12 rows in 1 pages for object "dim.tMsgState".
+DBCC results for 'dim.tPath'.
+There are 7 rows in 1 pages for object "dim.tPath".
+DBCC results for 'dim.tCarrierMashUp'.
+There are 61 rows in 1 pages for object "dim.tCarrierMashUp".
+DBCC results for 'dim.tAVSResult'.
+There are 9 rows in 1 pages for object "dim.tAVSResult".
+DBCC results for 'fact.tCallLog'.
+There are 172172217 rows in 2100014 pages for object "fact.tCallLog".
+DBCC results for 'Aggregator_2009'.
+There are 9223505 rows in 148768 pages for object "Aggregator_2009".
+DBCC results for 'dim.tMemberDevice'.
+There are 2882 rows in 61 pages for object "dim.tMemberDevice".
+DBCC results for 'fact.tWapImpression'.
+There are 141382016 rows in 715880 pages for object "fact.tWapImpression".
+DBCC results for 'fact.tWebArchivedMember'.
+There are 15786946 rows in 344761 pages for object "fact.tWebArchivedMember".
+DBCC results for 'dim.tWAPDeck'.
+There are 7 rows in 1 pages for object "dim.tWAPDeck".
+DBCC results for 'dim.tProduct'.
+There are 100 rows in 3 pages for object "dim.tProduct".
+DBCC results for 'fact.tWebPurchase'.
+There are 10048655 rows in 324300 pages for object "fact.tWebPurchase".
+DBCC results for 'dim.tCell'.
+There are 6 rows in 1 pages for object "dim.tCell".
+DBCC results for 'dim.tCoupon'.
+There are 178 rows in 3 pages for object "dim.tCoupon".
+DBCC results for 'dim.PackageSize'.
+There are 23 rows in 1 pages for object "dim.PackageSize".
+DBCC results for 'fact.TmptSMSBlast'.
+There are 7260 rows in 146 pages for object "fact.TmptSMSBlast".
+DBCC results for 'fact.tIvrInquiry'.
+There are 10134125 rows in 40217 pages for object "fact.tIvrInquiry".
+DBCC results for 'dim.PurchaseOfferType'.
+There are 4 rows in 1 pages for object "dim.PurchaseOfferType".
+DBCC results for 'dim.PurchaseOfferUnit'.
+There are 4 rows in 1 pages for object "dim.PurchaseOfferUnit".
+DBCC results for 'dim.tGender'.
+There are 4 rows in 1 pages for object "dim.tGender".
+DBCC results for 'dim.PurchaseOfferDetail'.
+There are 983 rows in 8 pages for object "dim.PurchaseOfferDetail".
+DBCC results for 'dim.tCarrierParent'.
+There are 61 rows in 2 pages for object "dim.tCarrierParent".
+DBCC results for 'dim.PurchaseOffer'.
+There are 202 rows in 2 pages for object "dim.PurchaseOffer".
+DBCC results for 'dim.tKeyword'.
+There are 304 rows in 8 pages for object "dim.tKeyword".
+DBCC results for 'dim.tEthnicity'.
+There are 8 rows in 1 pages for object "dim.tEthnicity".
+DBCC results for 'dim.tAdReach'.
+There are 4 rows in 1 pages for object "dim.tAdReach".
+DBCC results for 'dim.tCarrier'.
+There are 101 rows in 3 pages for object "dim.tCarrier".
+DBCC results for 'dim.tAggregator'.
+There are 6 rows in 1 pages for object "dim.tAggregator".
+DBCC results for 'fact.tWebNewUnique'.
+There are 14546213 rows in 97634 pages for object "fact.tWebNewUnique".
+DBCC results for 'dim.tBrand'.
+There are 11 rows in 1 pages for object "dim.tBrand".
+DBCC results for 'dim.tSite'.
+There are 738 rows in 20 pages for object "dim.tSite".
+DBCC results for 'dim.tAdSize'.
+There are 91 rows in 2 pages for object "dim.tAdSize".
+DBCC results for 'dim.tPaymentChannel'.
+There are 8 rows in 1 pages for object "dim.tPaymentChannel".
+DBCC results for 'fact.tMTM'.
+There are 30213949 rows in 576344 pages for object "fact.tMTM".
+DBCC results for 'dim.tKeywordsub'.
+There are 101 rows in 1 pages for object "dim.tKeywordsub".
+DBCC results for 'fact.tFMG2010MediaSpend'.
+There are 4020 rows in 25 pages for object "fact.tFMG2010MediaSpend".
+DBCC results for 'dim.tMarketType'.
+There are 0 rows in 0 pages for object "dim.tMarketType".
+DBCC results for 'fact.tFMG2010Sales'.
+There are 5824 rows in 24 pages for object "fact.tFMG2010Sales".
+DBCC results for 'fact.LL2010Sales'.
+There are 2465 rows in 9 pages for object "fact.LL2010Sales".
+DBCC results for 'dim.tAcquisitionVehicle'.
+There are 0 rows in 0 pages for object "dim.tAcquisitionVehicle".
+DBCC results for 'fact.tLL2010MediaSpend'.
+There are 393 rows in 4 pages for object "fact.tLL2010MediaSpend".
+DBCC results for 'dim.tHoursSinceLastCall'.
+There are 8 rows in 1 pages for object "dim.tHoursSinceLastCall".
+DBCC results for 'dim.tCarrier_bak'.
+There are 83 rows in 2 pages for object "dim.tCarrier_bak".
+DBCC results for 'dim.tMobileCustomerByProduct'.
+There are 3182888 rows in 45467 pages for object "dim.tMobileCustomerByProduct".
+DBCC results for 'dim.tGeography_wishlist'.
+There are 0 rows in 0 pages for object "dim.tGeography_wishlist".
+DBCC results for 'dim.tWebPaymentMethod'.
+There are 20 rows in 1 pages for object "dim.tWebPaymentMethod".
+DBCC results for 'dim.tGLPaymentCode'.
+There are 77 rows in 2 pages for object "dim.tGLPaymentCode".
+DBCC results for 'dim.tLastActive'.
+There are 5 rows in 1 pages for object "dim.tLastActive".
+DBCC results for 'fact.tFirstTimePurchaserProgramLog'.
+There are 2028 rows in 17 pages for object "fact.tFirstTimePurchaserProgramLog".
+DBCC results for 'dim.tCommunity'.
+There are 5 rows in 1 pages for object "dim.tCommunity".
+DBCC results for 'dim.tFirstTimePurchaseProgramTrainingStep'.
+There are 5 rows in 1 pages for object "dim.tFirstTimePurchaseProgramTrainingStep".
+DBCC results for 'dim.tAggregatorProductUnique'.
+There are 10185 rows in 52 pages for object "dim.tAggregatorProductUnique".
+DBCC results for 'dim.tAffiliateWebUser'.
+There are 97419 rows in 1839 pages for object "dim.tAffiliateWebUser".
+DBCC results for 'dim.tRejectReason'.
+There are 9 rows in 1 pages for object "dim.tRejectReason".
+DBCC results for 'dim.tPurchaseOfferType'.
+There are 58 rows in 2 pages for object "dim.tPurchaseOfferType".
+DBCC results for 'dim.tConsumptionLocation'.
+There are 3 rows in 1 pages for object "dim.tConsumptionLocation".
+DBCC results for 'fact.tOperatorConnect'.
+There are 192209 rows in 1658 pages for object "fact.tOperatorConnect".
+DBCC results for 'dim.tEgainEmailSubjects'.
+There are 30 rows in 1 pages for object "dim.tEgainEmailSubjects".
+DBCC results for 'dim.tSalesStatus'.
+There are 2 rows in 1 pages for object "dim.tSalesStatus".
+DBCC results for 'dim.tStatus'.
+There are 14 rows in 1 pages for object "dim.tStatus".
+DBCC results for 'dim.tAudioAdStatus'.
+There are 6 rows in 1 pages for object "dim.tAudioAdStatus".
+DBCC results for 'fact.tWebActiveMember'.
+There are 4919500 rows in 23098 pages for object "fact.tWebActiveMember".
+DBCC results for 'dim.tWebPaymentType'.
+There are 17 rows in 1 pages for object "dim.tWebPaymentType".
+DBCC results for 'dim.tWebPurchaseOffer'.
+There are 0 rows in 0 pages for object "dim.tWebPurchaseOffer".
+DBCC results for 'dim.tAdminUser'.
+There are 0 rows in 0 pages for object "dim.tAdminUser".
+DBCC results for 'fact.tCallMeVoice'.
+There are 7675 rows in 122 pages for object "fact.tCallMeVoice".
+DBCC results for 'dim.tInternalAcquisitionDim'.
+There are 0 rows in 0 pages for object "dim.tInternalAcquisitionDim".
+DBCC results for 'dim.tDeliveryStatus'.
+There are 3 rows in 1 pages for object "dim.tDeliveryStatus".
+DBCC results for 'dim.tCallCount'.
+There are 8 rows in 1 pages for object "dim.tCallCount".
+DBCC results for 'dim.tDirection'.
+There are 4 rows in 1 pages for object "dim.tDirection".
+DBCC results for 'dim.tPaymentVerification'.
+There are 8 rows in 1 pages for object "dim.tPaymentVerification".
+DBCC results for 'dim.tWebTransactionType'.
+There are 24 rows in 1 pages for object "dim.tWebTransactionType".
+DBCC results for 'fact.tWAPfunnel'.
+There are 99080 rows in 692 pages for object "fact.tWAPfunnel".
+DBCC results for 'dim.tSubscriptionStatus'.
+There are 8 rows in 1 pages for object "dim.tSubscriptionStatus".
+DBCC results for 'dim.tRetryCounter'.
+There are 0 rows in 0 pages for object "dim.tRetryCounter".
+DBCC results for 'dim.tFirstTimePurchaseProgramStatus'.
+There are 19 rows in 1 pages for object "dim.tFirstTimePurchaseProgramStatus".
+DBCC results for 'dim.tPaymentType'.
+Msg 2533, Level 16, State 2, Line 1
+Table error: page (4:139744) allocated to object ID 1913109906, index ID 0, partition ID 72057594084524032, alloc unit ID 72057594111787008 (type In-row data) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.
+Msg 2533, Level 16, State 2, Line 1
+Table error: page (4:139745) allocated to object ID 1913109906, index ID 0, partition ID 72057594084524032, alloc unit ID 72057594111787008 (type In-row data) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.
+There are 0 rows in 1 pages for object "dim.tPaymentType".
+CHECKDB found 0 allocation errors and 2 consistency errors in table 'dim.tPaymentType' (object ID 1913109906).
+DBCC results for 'dim.tItemPurchased'.
+There are 0 rows in 0 pages for object "dim.tItemPurchased".
+DBCC results for 'dim.tPurchaseCounter'.
+There are 0 rows in 0 pages for object "dim.tPurchaseCounter".
+DBCC results for 'dim.tIvrCustomer'.
+There are 1938798 rows in 23090 pages for object "dim.tIvrCustomer".
+DBCC results for 'dim.tYesNo'.
+There are 3 rows in 1 pages for object "dim.tYesNo".
+DBCC results for 'dim.tProcessorResponse'.
+There are 0 rows in 0 pages for object "dim.tProcessorResponse".
+DBCC results for 'dim.tResponseCode'.
+There are 0 rows in 0 pages for object "dim.tResponseCode".
+DBCC results for 'finance.tPayPal'.
+There are 1668 rows in 13 pages for object "finance.tPayPal".
+DBCC results for 'dim.tIvrCustomerByProduct'.
+There are 2048691 rows in 48242 pages for object "dim.tIvrCustomerByProduct".
+DBCC results for 'sys.queue_messages_1977058079'.
+There are 0 rows in 0 pages for object "sys.queue_messages_1977058079".
+DBCC results for 'dim.tApplication'.
+There are 8 rows in 1 pages for object "dim.tApplication".
+DBCC results for 'sys.queue_messages_2009058193'.
+There are 0 rows in 0 pages for object "sys.queue_messages_2009058193".
+DBCC results for 'finance.tException'.
+There are 3392 rows in 25 pages for object "finance.tException".
+DBCC results for 'tPriceRange'.
+There are 0 rows in 0 pages for object "tPriceRange".
+DBCC results for 'sys.queue_messages_2041058307'.
+There are 0 rows in 0 pages for object "sys.queue_messages_2041058307".
+DBCC results for 'dim.tIvrPayment'.
+There are 130142 rows in 343 pages for object "dim.tIvrPayment".
+DBCC results for 'dim.tKeyword_bak'.
+There are 101 rows in 2 pages for object "dim.tKeyword_bak".
+DBCC results for 'dim.tBillingLocation'.
+There are 0 rows in 0 pages for object "dim.tBillingLocation".
+DBCC results for 'dim.tCommand'.
+There are 145 rows in 4 pages for object "dim.tCommand".
+DBCC results for 'dim.tEgainEmailSubjectGroups'.
+There are 16 rows in 1 pages for object "dim.tEgainEmailSubjectGroups".
+DBCC results for 'tAlertStatus'.
+There are 4 rows in 1 pages for object "tAlertStatus".
+DBCC results for 'dim.tUpgradeToPaid'.
+There are 5 rows in 1 pages for object "dim.tUpgradeToPaid".
+DBCC results for 'fact.tAggregator'.
+There are 98214470 rows in 1665489 pages for object "fact.tAggregator".
+DBCC results for 'fact.tFeatureDuration'.
+There are 0 rows in 0 pages for object "fact.tFeatureDuration".
+DBCC results for 'dim.tLanguage'.
+There are 5 rows in 1 pages for object "dim.tLanguage".
+CHECKDB found 0 allocation errors and 2 consistency errors in database 'acumen'.
+repair_allow_data_loss is the minimum repair level for the errors found by DBCC CHECKDB (acumen).
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.

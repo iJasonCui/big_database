@@ -1,0 +1,409 @@
+DBCC results for 'archive'.
+Service Broker Msg 9675, State 1: Message Types analyzed: 14.
+Service Broker Msg 9676, State 1: Service Contracts analyzed: 6.
+Service Broker Msg 9667, State 1: Services analyzed: 3.
+Service Broker Msg 9668, State 1: Service Queues analyzed: 3.
+Service Broker Msg 9669, State 1: Conversation Endpoints analyzed: 0.
+Service Broker Msg 9674, State 1: Conversation Groups analyzed: 0.
+Service Broker Msg 9670, State 1: Remote Service Bindings analyzed: 0.
+DBCC results for 'sys.sysrowsetcolumns'.
+There are 4774 rows in 40 pages for object "sys.sysrowsetcolumns".
+DBCC results for 'sys.sysrowsets'.
+There are 355 rows in 3 pages for object "sys.sysrowsets".
+DBCC results for 'sysallocunits'.
+There are 372 rows in 5 pages for object "sysallocunits".
+DBCC results for 'sys.sysfiles1'.
+There are 5 rows in 1 pages for object "sys.sysfiles1".
+DBCC results for 'sys.syshobtcolumns'.
+There are 4774 rows in 48 pages for object "sys.syshobtcolumns".
+DBCC results for 'sys.syshobts'.
+There are 355 rows in 3 pages for object "sys.syshobts".
+DBCC results for 'sys.sysftinds'.
+There are 0 rows in 0 pages for object "sys.sysftinds".
+DBCC results for 'sys.sysserefs'.
+There are 372 rows in 4 pages for object "sys.sysserefs".
+DBCC results for 'sys.sysowners'.
+There are 27 rows in 1 pages for object "sys.sysowners".
+DBCC results for 'sys.sysprivs'.
+There are 148 rows in 1 pages for object "sys.sysprivs".
+DBCC results for 'sys.sysschobjs'.
+There are 393 rows in 9 pages for object "sys.sysschobjs".
+DBCC results for 'sys.syscolpars'.
+There are 2773 rows in 61 pages for object "sys.syscolpars".
+DBCC results for 'sys.sysnsobjs'.
+There are 1 rows in 1 pages for object "sys.sysnsobjs".
+DBCC results for 'sys.syscerts'.
+There are 0 rows in 0 pages for object "sys.syscerts".
+DBCC results for 'sys.sysxprops'.
+There are 64 rows in 8 pages for object "sys.sysxprops".
+DBCC results for 'sys.sysscalartypes'.
+There are 27 rows in 1 pages for object "sys.sysscalartypes".
+DBCC results for 'sys.systypedsubobjs'.
+There are 1 rows in 1 pages for object "sys.systypedsubobjs".
+DBCC results for 'sys.sysidxstats'.
+There are 949 rows in 27 pages for object "sys.sysidxstats".
+DBCC results for 'sys.sysiscols'.
+There are 952 rows in 7 pages for object "sys.sysiscols".
+DBCC results for 'sys.sysbinobjs'.
+There are 23 rows in 1 pages for object "sys.sysbinobjs".
+DBCC results for 'sys.sysobjvalues'.
+There are 1080 rows in 489 pages for object "sys.sysobjvalues".
+DBCC results for 'sys.sysclsobjs'.
+There are 30 rows in 1 pages for object "sys.sysclsobjs".
+DBCC results for 'sys.sysrowsetrefs'.
+There are 78 rows in 1 pages for object "sys.sysrowsetrefs".
+DBCC results for 'sys.sysremsvcbinds'.
+There are 0 rows in 0 pages for object "sys.sysremsvcbinds".
+DBCC results for 'sys.sysxmitqueue'.
+There are 0 rows in 0 pages for object "sys.sysxmitqueue".
+DBCC results for 'sys.sysrts'.
+There are 1 rows in 1 pages for object "sys.sysrts".
+DBCC results for 'sys.sysconvgroup'.
+There are 0 rows in 0 pages for object "sys.sysconvgroup".
+DBCC results for 'sys.sysdesend'.
+There are 0 rows in 0 pages for object "sys.sysdesend".
+DBCC results for 'sys.sysdercv'.
+There are 0 rows in 0 pages for object "sys.sysdercv".
+DBCC results for 'sys.syssingleobjrefs'.
+There are 180 rows in 1 pages for object "sys.syssingleobjrefs".
+DBCC results for 'sys.sysmultiobjrefs'.
+There are 502 rows in 4 pages for object "sys.sysmultiobjrefs".
+DBCC results for 'sys.sysdbfiles'.
+There are 5 rows in 1 pages for object "sys.sysdbfiles".
+DBCC results for 'sys.sysguidrefs'.
+There are 1 rows in 1 pages for object "sys.sysguidrefs".
+DBCC results for 'sys.sysqnames'.
+There are 91 rows in 1 pages for object "sys.sysqnames".
+DBCC results for 'sys.sysxmlcomponent'.
+There are 93 rows in 1 pages for object "sys.sysxmlcomponent".
+DBCC results for 'sys.sysxmlfacet'.
+There are 97 rows in 1 pages for object "sys.sysxmlfacet".
+DBCC results for 'sys.sysxmlplacement'.
+There are 17 rows in 1 pages for object "sys.sysxmlplacement".
+DBCC results for 'sys.sysobjkeycrypts'.
+There are 0 rows in 0 pages for object "sys.sysobjkeycrypts".
+DBCC results for 'sys.sysasymkeys'.
+There are 0 rows in 0 pages for object "sys.sysasymkeys".
+DBCC results for 'sys.syssqlguides'.
+There are 0 rows in 0 pages for object "sys.syssqlguides".
+DBCC results for 'sys.sysbinsubobjs'.
+There are 0 rows in 0 pages for object "sys.sysbinsubobjs".
+DBCC results for 'mobile.PurchaseOfferType'.
+There are 56 rows in 1 pages for object "mobile.PurchaseOfferType".
+DBCC results for 'ivr.SMSMarketingMessageQueue'.
+There are 1531704 rows in 29596 pages for object "ivr.SMSMarketingMessageQueue".
+DBCC results for 'mobile.Carrier'.
+There are 442 rows in 3 pages for object "mobile.Carrier".
+DBCC results for 'web.messageMail'.
+There are 4978562 rows in 36100 pages for object "web.messageMail".
+DBCC results for 'ivr.SubscriptionMembershipAudit'.
+There are 26082 rows in 381 pages for object "ivr.SubscriptionMembershipAudit".
+DBCC results for 'mobile.PurchaseOfferDetail'.
+There are 30889 rows in 247 pages for object "mobile.PurchaseOfferDetail".
+DBCC results for 'mobile.Purchase'.
+There are 113560653 rows in 731093 pages for object "mobile.Purchase".
+DBCC results for 'mobile.DeletedMember'.
+There are 1247454 rows in 5987 pages for object "mobile.DeletedMember".
+DBCC results for 'mobile.Mblox'.
+There are 10864438 rows in 408249 pages for object "mobile.Mblox".
+DBCC results for 'web.UserSubscriptionAccountHistory'.
+There are 0 rows in 0 pages for object "web.UserSubscriptionAccountHistory".
+DBCC results for 'finance.TeleCheck_tmp'.
+There are 4 rows in 1 pages for object "finance.TeleCheck_tmp".
+DBCC results for 'finance.TeleCheck_tmp2'.
+There are 0 rows in 0 pages for object "finance.TeleCheck_tmp2".
+DBCC results for 'finance.TeleCheck'.
+There are 6115 rows in 167 pages for object "finance.TeleCheck".
+DBCC results for 'mobile.MTMDaily'.
+There are 30272953 rows in 968837 pages for object "mobile.MTMDaily".
+DBCC results for 'web.ProfileSmile'.
+There are 5808711 rows in 30108 pages for object "web.ProfileSmile".
+DBCC results for 'mobile.Dump_MTMDaily'.
+There are 6593 rows in 148 pages for object "mobile.Dump_MTMDaily".
+DBCC results for 'mobile.tApplicationMap'.
+There are 3 rows in 1 pages for object "mobile.tApplicationMap".
+DBCC results for 'user_info_all'.
+There are 0 rows in 6248 pages for object "user_info_all".
+DBCC results for 'web.user_info'.
+There are 15542930 rows in 605816 pages for object "web.user_info".
+DBCC results for 'dm.Partnership'.
+Msg 2533, Level 16, State 2, Line 1
+Table error: page (1:1949353) allocated to object ID 379864420, index ID 1, partition ID 72057594118144000, alloc unit ID 72057594527940608 (type In-row data) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.
+Msg 8980, Level 16, State 1, Line 1
+Table error: Object ID 379864420, index ID 1, partition ID 72057594118144000, alloc unit ID 72057594527940608 (type In-row data). Index node page (0:0), slot 0 refers to child page (1:1949353) and previous child (0:0), but they were not encountered.
+Msg 8979, Level 16, State 1, Line 1
+Table error: Object ID 379864420, index ID 1, partition ID 72057594118144000, alloc unit ID 72057594527940608 (type In-row data). Page (3:4272988) is missing references from parent (unknown) and previous (page (1:194029)) nodes. Possible bad root entry in system catalog.
+Msg 8979, Level 16, State 1, Line 1
+Table error: Object ID 379864420, index ID 1, partition ID 72057594118144000, alloc unit ID 72057594527940608 (type In-row data). Page (5:289343) is missing references from parent (unknown) and previous (page (3:4272988)) nodes. Possible bad root entry in system catalog.
+There are 136 rows in 2 pages for object "dm.Partnership".
+CHECKDB found 0 allocation errors and 4 consistency errors in table 'dm.Partnership' (object ID 379864420).
+DBCC results for 'mobile.tProductMap'.
+There are 3 rows in 1 pages for object "mobile.tProductMap".
+DBCC results for 'ivr.CallLog'.
+There are 179920115 rows in 4072616 pages for object "ivr.CallLog".
+DBCC results for 'dm.TaxRate'.
+There are 186 rows in 2 pages for object "dm.TaxRate".
+DBCC results for 'web.RealCreditCardType'.
+There are 0 rows in 0 pages for object "web.RealCreditCardType".
+DBCC results for 'prime.av_adcode_category'.
+There are 0 rows in 0 pages for object "prime.av_adcode_category".
+DBCC results for 'ivr.Message'.
+There are 130844264 rows in 3462893 pages for object "ivr.Message".
+DBCC results for 'User_'.
+There are 0 rows in 0 pages for object "User_".
+DBCC results for 'mobile.AccessLog'.
+There are 27731388 rows in 737794 pages for object "mobile.AccessLog".
+DBCC results for 'lportal.User_'.
+There are 697 rows in 31 pages for object "lportal.User_".
+DBCC results for 'av_adcode_list'.
+There are 0 rows in 0 pages for object "av_adcode_list".
+DBCC results for 'lportal.Contact_'.
+There are 701 rows in 24 pages for object "lportal.Contact_".
+DBCC results for 'ivr.Mailbox_old'.
+There are 0 rows in 0 pages for object "ivr.Mailbox_old".
+DBCC results for 'cm.AuditLog'.
+There are 223582 rows in 1738 pages for object "cm.AuditLog".
+DBCC results for 'finance.Interac'.
+There are 1009 rows in 11 pages for object "finance.Interac".
+DBCC results for 'mobile.CarrierCommunication'.
+There are 7902963 rows in 416805 pages for object "mobile.CarrierCommunication".
+DBCC results for 'web.AdminAccountTransaction'.
+There are 425079 rows in 2294 pages for object "web.AdminAccountTransaction".
+DBCC results for 'cm.AuditLogNotes'.
+There are 3290 rows in 59 pages for object "cm.AuditLogNotes".
+DBCC results for 'cm.ContentLog'.
+There are 20327327 rows in 844652 pages for object "cm.ContentLog".
+DBCC results for 'SMS_IN_Filter'.
+There are 0 rows in 0 pages for object "SMS_IN_Filter".
+DBCC results for 'cm.Gender'.
+There are 3 rows in 1 pages for object "cm.Gender".
+DBCC results for 'ivr.Mailbox'.
+There are 260606031 rows in 12081436 pages for object "ivr.Mailbox".
+DBCC results for 'lportal.Users_Orgs'.
+There are 767 rows in 4 pages for object "lportal.Users_Orgs".
+DBCC results for 'cm.SegmentCategory'.
+There are 87 rows in 1 pages for object "cm.SegmentCategory".
+DBCC results for 'cm.Product'.
+There are 18 rows in 2 pages for object "cm.Product".
+DBCC results for 'finance.PayPal'.
+There are 2280 rows in 101 pages for object "finance.PayPal".
+DBCC results for 'prime.av_adcode_list'.
+There are 0 rows in 0 pages for object "prime.av_adcode_list".
+DBCC results for 'pos.Payment'.
+There are 300242 rows in 14661 pages for object "pos.Payment".
+DBCC results for 'web.jump_user'.
+There are 14618211 rows in 160066 pages for object "web.jump_user".
+DBCC results for 'cm.Reason'.
+There are 1605 rows in 18 pages for object "cm.Reason".
+DBCC results for 'mobile.tCarrierMap'.
+There are 0 rows in 0 pages for object "mobile.tCarrierMap".
+DBCC results for 'cm.ContentTypes'.
+There are 25 rows in 1 pages for object "cm.ContentTypes".
+DBCC results for 'pos.Offer'.
+There are 19004 rows in 280 pages for object "pos.Offer".
+DBCC results for 'dm.DID'.
+There are 45293 rows in 972 pages for object "dm.DID".
+DBCC results for 'web.PurchaseOfferDetail'.
+There are 949 rows in 8 pages for object "web.PurchaseOfferDetail".
+DBCC results for 'web.RenewalRetryHistory'.
+There are 191169 rows in 1614 pages for object "web.RenewalRetryHistory".
+DBCC results for 'web.AffiliateUser'.
+There are 3306134 rows in 16533 pages for object "web.AffiliateUser".
+DBCC results for 'prime.av_adcode_lookup'.
+There are 0 rows in 0 pages for object "prime.av_adcode_lookup".
+DBCC results for 'cm.QaAlerts'.
+There are 4 rows in 9 pages for object "cm.QaAlerts".
+DBCC results for 'Customer'.
+There are 0 rows in 0 pages for object "Customer".
+DBCC results for 'web.PurchaseOffer'.
+There are 240 rows in 3 pages for object "web.PurchaseOffer".
+DBCC results for 'pos.Customer'.
+There are 1948508 rows in 43484 pages for object "pos.Customer".
+DBCC results for 'web.SubscriptionOfferDetail'.
+There are 456 rows in 10 pages for object "web.SubscriptionOfferDetail".
+DBCC results for 'prime.av_adcode_sublevel'.
+There are 0 rows in 0 pages for object "prime.av_adcode_sublevel".
+DBCC results for 'mobile.tPurchaseOfferTypeMap'.
+There are 0 rows in 0 pages for object "mobile.tPurchaseOfferTypeMap".
+DBCC results for 'web.SubscriptionTransaction'.
+There are 1142179 rows in 8829 pages for object "web.SubscriptionTransaction".
+DBCC results for 'web.PurchaseDiscount'.
+There are 8276 rows in 569 pages for object "web.PurchaseDiscount".
+DBCC results for 'web.SubscriptionOffer'.
+There are 84 rows in 5 pages for object "web.SubscriptionOffer".
+DBCC results for 'web.user_info_deleted'.
+There are 1379219 rows in 5260 pages for object "web.user_info_deleted".
+DBCC results for 'av_adcode_title'.
+There are 0 rows in 0 pages for object "av_adcode_title".
+DBCC results for 'web.PurchaseSubscriptionDetail'.
+There are 15070 rows in 342 pages for object "web.PurchaseSubscriptionDetail".
+DBCC results for 'lportal.Organization_'.
+There are 15 rows in 1 pages for object "lportal.Organization_".
+DBCC results for 'pos.Account'.
+There are 1301337 rows in 24394 pages for object "pos.Account".
+DBCC results for 'lportal.UserGroup'.
+There are 27 rows in 1 pages for object "lportal.UserGroup".
+DBCC results for 'web.Coupon'.
+There are 266 rows in 13 pages for object "web.Coupon".
+DBCC results for 'web.PaymentechResponse'.
+There are 2856815 rows in 32724 pages for object "web.PaymentechResponse".
+DBCC results for 'web.Discount'.
+There are 108 rows in 4 pages for object "web.Discount".
+DBCC results for 'prime.av_adcode_title'.
+There are 0 rows in 0 pages for object "prime.av_adcode_title".
+DBCC results for 'web.PurchaseCreditDetail'.
+There are 195 rows in 27 pages for object "web.PurchaseCreditDetail".
+DBCC results for 'web.DiscountType'.
+There are 7 rows in 2 pages for object "web.DiscountType".
+DBCC results for 'web.admin_notes'.
+There are 54796 rows in 19650 pages for object "web.admin_notes".
+DBCC results for 'testTable1'.
+There are 2 rows in 2 pages for object "testTable1".
+DBCC results for 'prime.Signup'.
+There are 65862 rows in 535 pages for object "prime.Signup".
+DBCC results for 'sysdiagrams'.
+There are 0 rows in 0 pages for object "sysdiagrams".
+DBCC results for 'mobile.PurchaseOffer'.
+There are 21 rows in 1 pages for object "mobile.PurchaseOffer".
+DBCC results for 'mobile.State'.
+There are 8 rows in 1 pages for object "mobile.State".
+DBCC results for 'mobile.Profile'.
+There are 739042 rows in 9137 pages for object "mobile.Profile".
+DBCC results for 'mobile.Currency'.
+There are 5 rows in 1 pages for object "mobile.Currency".
+DBCC results for 'lportal.Users_UserGroups'.
+There are 337 rows in 3 pages for object "lportal.Users_UserGroups".
+DBCC results for 'mobile.mBloxSummary'.
+There are 7031784 rows in 98097 pages for object "mobile.mBloxSummary".
+DBCC results for 'mobile.MemberApplicationProfile'.
+There are 5336501 rows in 43930 pages for object "mobile.MemberApplicationProfile".
+DBCC results for 'ivr.QPASS_Declines'.
+There are 8825 rows in 295 pages for object "ivr.QPASS_Declines".
+DBCC results for 'prime.UserInfo'.
+There are 65637 rows in 1608 pages for object "prime.UserInfo".
+DBCC results for 'mobile.SmsCommand'.
+There are 37 rows in 2 pages for object "mobile.SmsCommand".
+DBCC results for 'web.SessionPurchase'.
+There are 414791 rows in 5627 pages for object "web.SessionPurchase".
+DBCC results for 'mobile.SmsCommandAlias'.
+There are 150 rows in 2 pages for object "mobile.SmsCommandAlias".
+DBCC results for 'pos.Activity'.
+There are 28353993 rows in 1552445 pages for object "pos.Activity".
+DBCC results for 'pos.ActivityOther'.
+There are 9864012 rows in 136767 pages for object "pos.ActivityOther".
+DBCC results for 'prime.Profile'.
+There are 11588550 rows in 160160 pages for object "prime.Profile".
+DBCC results for 'ivr.PreBlast'.
+There are 1234779 rows in 12430 pages for object "ivr.PreBlast".
+DBCC results for 'web.CreditCard'.
+There are 2986419 rows in 66155 pages for object "web.CreditCard".
+DBCC results for 'web.BillingLocation'.
+There are 0 rows in 0 pages for object "web.BillingLocation".
+DBCC results for 'mobile.BentMTMnewFreePaid-delete'.
+There are 349588 rows in 2479 pages for object "mobile.BentMTMnewFreePaid-delete".
+DBCC results for 'pos.ActivityPGS'.
+There are 458458 rows in 4099 pages for object "pos.ActivityPGS".
+DBCC results for 'promo.SmsBlastMDN'.
+There are 75122 rows in 289 pages for object "promo.SmsBlastMDN".
+DBCC results for 'web.UserAccount'.
+There are 14183634 rows in 98734 pages for object "web.UserAccount".
+DBCC results for 'web.UserSubscriptionAccount'.
+There are 702831 rows in 5014 pages for object "web.UserSubscriptionAccount".
+DBCC results for 'mobile.Member'.
+There are 4143939 rows in 38158 pages for object "mobile.Member".
+DBCC results for 'web.Purchase'.
+There are 1204334 rows in 15949 pages for object "web.Purchase".
+DBCC results for 'cm.AlertAppeal'.
+There are 34 rows in 5 pages for object "cm.AlertAppeal".
+DBCC results for 'prime.RemovedProfile'.
+There are 20476 rows in 282 pages for object "prime.RemovedProfile".
+DBCC results for 'finance.TaxRate'.
+There are 36 rows in 2 pages for object "finance.TaxRate".
+DBCC results for 'web.VCCalloutLog'.
+There are 17622 rows in 381 pages for object "web.VCCalloutLog".
+DBCC results for 'web.VCCallout'.
+There are 9818 rows in 242 pages for object "web.VCCallout".
+DBCC results for 'mobile.Account'.
+There are 5512919 rows in 66079 pages for object "mobile.Account".
+DBCC results for 'dm.CITY'.
+There are 195 rows in 3 pages for object "dm.CITY".
+DBCC results for 'web.VoiceConnect'.
+There are 358169 rows in 4158 pages for object "web.VoiceConnect".
+DBCC results for 'web.AccountTransaction'.
+There are 4469604 rows in 28969 pages for object "web.AccountTransaction".
+DBCC results for 'mobile.ProductCode_LK'.
+There are 0 rows in 0 pages for object "mobile.ProductCode_LK".
+DBCC results for 'web.ipCountry'.
+There are 1470586 rows in 17149 pages for object "web.ipCountry".
+DBCC results for 'mobile.ProductCode_LK'.
+There are 95 rows in 1 pages for object "mobile.ProductCode_LK".
+DBCC results for 'mobile.AdSize'.
+There are 13 rows in 1 pages for object "mobile.AdSize".
+DBCC results for 'finance.PTDepositDetail'.
+There are 1681816 rows in 45436 pages for object "finance.PTDepositDetail".
+DBCC results for 'mobile.AdType'.
+There are 7 rows in 1 pages for object "mobile.AdType".
+DBCC results for 'mobile.AdTitle'.
+There are 16 rows in 1 pages for object "mobile.AdTitle".
+DBCC results for 'mobile.Monitor_Loads'.
+There are 2465 rows in 11 pages for object "mobile.Monitor_Loads".
+DBCC results for 'web.SessionMember'.
+There are 29930018 rows in 243667 pages for object "web.SessionMember".
+DBCC results for 'ivr.FirstTimePurchaserProgram'.
+There are 703 rows in 14 pages for object "ivr.FirstTimePurchaserProgram".
+DBCC results for 'ivr.FirstTimePurchaserProgramLog'.
+There are 1067 rows in 11 pages for object "ivr.FirstTimePurchaserProgramLog".
+DBCC results for 'mobile.AdSublevel'.
+There are 24 rows in 1 pages for object "mobile.AdSublevel".
+DBCC results for 'dm.PurchaseType'.
+Msg 2533, Level 16, State 2, Line 1
+Table error: page (1:9215160) allocated to object ID 1790629422, index ID 0, partition ID 72057594053722112, alloc unit ID 72057594098417664 (type In-row data) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.
+There are 0 rows in 1 pages for object "dm.PurchaseType".
+CHECKDB found 0 allocation errors and 1 consistency errors in table 'dm.PurchaseType' (object ID 1790629422).
+DBCC results for 'web.messages'.
+There are 54584842 rows in 2183483 pages for object "web.messages".
+DBCC results for 'mobile.AdList'.
+There are 578 rows in 14 pages for object "mobile.AdList".
+DBCC results for 'mobile.CarrierMessageStatus'.
+There are 10 rows in 1 pages for object "mobile.CarrierMessageStatus".
+DBCC results for 'mobile.tMTMnewFreePaid'.
+There are 0 rows in 0 pages for object "mobile.tMTMnewFreePaid".
+DBCC results for 'ivr.CampaignBlast'.
+There are 238 rows in 7 pages for object "ivr.CampaignBlast".
+DBCC results for 'mobile.MessageType'.
+There are 65 rows in 2 pages for object "mobile.MessageType".
+DBCC results for 'promo.DAAdcode'.
+There are 30 rows in 1 pages for object "promo.DAAdcode".
+DBCC results for 'DAadCodesv2'.
+There are 23 rows in 1 pages for object "DAadCodesv2".
+DBCC results for 'dm.NpaNxx'.
+There are 139982 rows in 1691 pages for object "dm.NpaNxx".
+DBCC results for 'ivr.RefScrubResult'.
+There are 35 rows in 2 pages for object "ivr.RefScrubResult".
+DBCC results for 'sys.queue_messages_1977058079'.
+There are 0 rows in 0 pages for object "sys.queue_messages_1977058079".
+DBCC results for 'pos.ActivitySMS'.
+There are 226158 rows in 4546 pages for object "pos.ActivitySMS".
+DBCC results for 'mobile.MTM'.
+There are 9405377 rows in 207431 pages for object "mobile.MTM".
+DBCC results for 'sys.queue_messages_2009058193'.
+There are 0 rows in 0 pages for object "sys.queue_messages_2009058193".
+DBCC results for 'sys.queue_messages_2041058307'.
+There are 0 rows in 0 pages for object "sys.queue_messages_2041058307".
+DBCC results for 'dm.AdvertiseSize'.
+There are 91 rows in 1 pages for object "dm.AdvertiseSize".
+DBCC results for 'mobile.Atlas'.
+There are 137673 rows in 3383 pages for object "mobile.Atlas".
+DBCC results for 'mobile.Application'.
+There are 3 rows in 1 pages for object "mobile.Application".
+DBCC results for 'ivr.WesternUnion'.
+There are 0 rows in 0 pages for object "ivr.WesternUnion".
+DBCC results for 'dm.AdvertiseCode'.
+There are 0 rows in 0 pages for object "dm.AdvertiseCode".
+DBCC results for 'mobile.Product'.
+There are 3 rows in 1 pages for object "mobile.Product".
+DBCC results for 'finance.WesternUnion'.
+There are 7536 rows in 192 pages for object "finance.WesternUnion".
+CHECKDB found 0 allocation errors and 5 consistency errors in database 'archive'.
+repair_allow_data_loss is the minimum repair level for the errors found by DBCC CHECKDB (archive).
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
