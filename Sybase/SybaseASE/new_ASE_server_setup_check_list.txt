@@ -1,0 +1,180 @@
+[VIP note]
+
+1. switch the ip between 26p and 28p (UNIX)
+2. change local interfaces file (ip address)
+3. make sure dsync on for 28p
+
+
+step 1: passwd sybase
+[root@newSRV] passwd sybase
+
+step 2: .bashrc
+[jasonc@webccs] scp ~/src/javalife/db/scripts/maint/.bashrc sybase@[newSRV]:/opt/etc/sybase12_52
+
+make /data/db,  /data/dump and /opt/etc/sybase owned by SYBASE
+
+step 3: DSQUERY and SYBDUMP
+[sybase@newSRV] vi $HOME/.bash_profile AND replace "export DSQUERY=webalpha" with "export DSQUERY=[newSRV]"
+and change "export SYBDUMP=/data/dump"
+
+
+step 4: startserver
+[sybase@newSRV]
+if [ -not exists /opt/etc/sybase12_52/install/startserver]
+cp /opt/etc/sybase12_52/ASE-12_5/install/startserver /opt/etc/sybase12_52/install
+
+
+step 5: RUN files
+
+sybase@webdb31p:~/install]$ scp /opt/etc/sybase12_52/install/[RS]* sybase@dr-db2:~/install
+
+RUN_SYB_BACKUP  RUN_[newSRV]m    RUN_[newSRV]p    STOP_[newSRV]m   STOP_[newSRV]p
+
+step 6: interfaces file
+
+[sybase@webdb29p:~]$ scp interfaces sybase@webdb26p:~/interfaces.webdb29p
+
+
+step 7: config file
+
+[sybase@webdb29p:~]$ scp webdb29p.cfg sybase@webdb26p:~/webdb29p.cfg
+
+step 8: shared memory of UNIX
+
+step 9: startup server in "m" mode
+
+step 10: syslogins and roles
+
+step 11: disk-init
+
+step 12: create db for load
+
+step 13: scp database dump from other servers
+
+step 14: load database 
+
+step 15: online database
+
+step 16: sp_dboption "dbo user only", true for all user database
+
+step 17: add role "read_un_limited"
+
+step 18: check_ase_log
+
+step 19: send_mail
+
+step 20: $SYBMAINT scripts (dump db and dump tran and so on)
+
+step 21: set up crontab
+
+step 22: sysusers
+
+select * from  Profile_ai..sysusers
+update Profile_ai..sysusers set suid = 3 where name = "web"
+update Profile_ai..sysusers set suid = 5 where name = "webmaint"
+select * from master..syslogins
+
+*****27p and 30p x2kcco user and webrealm (password "BadIdea2")
+*****webmaint user has select priviledge on syslogshold table
+--=============================================
+EXEC sp_adduser 'webmaint','webmaint','public'
+go
+IF USER_ID('webmaint') IS NOT NULL
+    PRINT '<<< CREATED USER webmaint >>>'
+ELSE
+    PRINT '<<< FAILED CREATING USER webmaint >>>'
+go
+GRANT SELECT ON dbo.syslogshold TO webmaint
+go
+--==============================================
+
+step 23: check rep2p_maint_user as alias of dbo
+
+step 24: remote server and local server setup
+
+step 25: MDA table setup
+
+step 26: check trust relationship
+
+two way trust relationship between 0r and 29p
+two way trust relationship between webdb28p and 29p 
+one way trust from 29p to opsdb1p (run "ssh  -l backmon  opsdb1p" on 29p )
+one way trust from websrvr-115 TO 29p (run "ssh webdb29p" on websrvr-115 )
+
+
+step 27: check whether the new server can send out e-mail or not
+
+
+step 28: performance tuning
+
+EXEC sp_cacheconfig "default data cache", 5600MB
+EXEC sp_deviceattr tempdbdev, "dsync", false
+EXEC sp_configure 'number of oam trips',5
+EXEC sp_configure 'number of index trips',5
+
+
+step 30: online index maintenance
+
+step 31: sp__dbo_only (user defined system procs)
+
+31.1 [jcui@gxcvs1 sybsystemprocs]$ cd /home/jcui/web/javalife/db/sproc/sybsystemprocs
+31.2 vi $SYBASE/interfaces root password "401to427"
+31.3 vi $HOME/.sybpwd
+
+step 32: wxdbmaint (sp_sysmon db stats)
+
+32.1 vi $SYBASE/interfaces root password "401to427"
+32.2 vi $HOME/.sybpwd
+32.3 change crontab
+32.4 
+
+step 33: add the new server into Nagios (add into interfaces and set up threshold)
+
+33.1 login as root on 'w151monitor' 
+33.2 su - sybase; vi $SYBASE/interfaces 
+33.3 sybase disk space threshold "; su - nagios; cd /usr/local/nagios/libexec; vi sybase.cf
+33.4 sybase connection; su - nagios; cd /usr/local/nagios/libexec; vi "syb.cfg"
+33.5 From the grep "check_dbperf" in the /usr/local/nagios/etc/objects/commands.cfg file
+33.6 sybase performance; 
+
+step 34: set up database backup and set up backupMonitor system
+
+step 35: add the graph into "webccs"
+
+step 36: g104iqdb01 (add into MDA collection)
+
+
+
+================ tuning tips =============
+
+  Tuning Recommendations for Transaction Management                             
+  -------------------------------------------------                             
+  - Consider decreasing the 'user log cache size'
+    configuration parameter if it is greater than the
+    logical database page size.
+
+
+  Tuning Recommendations for Lock Management                                    
+  ------------------------------------------                                    
+  - Consider increasing the 'deadlock checking period' parameter
+    by 50 ms.
+
+
+    Tuning Recommendations for Data cache : default data cache                  
+    -------------------------------------                                       
+    - Consider using 'relaxed LRU replacement policy'
+      for this cache.
+ 
+    - Consider adding a large I/O pool for this cache.
+ 
+    - Consider using Named Caches or Cache partitions or both.
+
+
+
+
+
+
+
+
+
+
