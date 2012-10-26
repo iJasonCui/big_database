@@ -1,0 +1,82 @@
+==========proxy table=============
+1,turn on the parameter
+sp_configure 'allow remote access',1
+
+2,add entry to interface file
+
+3,add remote server at local server(webdb0r)
+sp_addserver ivrdb1r, ASEnterprise, ivrdb1r
+
+4,map local user to remote user
+(only when username or password is different from remote user)
+sp_addexternlogin webdb1g,aradu,webmaint,password
+
+5,create proxy table
+
+create existing table BatchLog
+(
+    batchId             int      NOT NULL,
+    mainCityId          smallint NULL,
+    fileId              smallint NULL,
+    FtpFinishedDateTime datetime NULL,
+    BcpFinishedDateTime datetime NULL,
+    rowCountBcp         int      NULL,
+    rowCountAuditing    int      DEFAULT 0 NULL,
+    SpFinishedDateTime  datetime NULL,
+    rowCountArchived    int      NULL,
+    rowCountReport      int      NULL,
+    createdDateTimeFrom datetime NULL,
+    createdDateTimeTo   datetime NULL,
+    AsStartedDateTime   datetime NULL,
+    AsFinishedDateTime  datetime NULL,
+    fileDate            int      NULL,
+    productId           int      NULL,
+    rowCountUpdated     int      NULL,
+    byteSize            int      NULL
+)
+at "ivrdb1r.DB_LOG..BatchLog"
+
+6,create proxy table with condition
+  create a view on remote table then create proxy table on that view.
+
+
+==========proxy database================
+
+1,turn on the parameter
+sp_configure 'allow remote access',1
+
+2,add entry to interface file on both servers
+
+3,add remote server at local server(webdb0r) 
+sp_addserver webdb1g, ASEnterprise, webdb1g
+
+4,map local user to remote user
+(only when username or password is different from remote user)
+sp_addexternlogin webdb1g,aradu,webmaint
+
+5,grant connect permission to user
+grant connect to public
+confirm with following: connect to webdb1g
+
+6,create database Accounting1g4100
+  with default_location='webdb1g.Accounting.dbo.'
+  for proxy_update
+
+7,if the db is created by cron_sa, need to grant permission
+  to aradu or webmaint
+
+8, try to browse data through proxy db
+   use Accounting1g4100
+   go
+   select * from ......
+
+===========Modify/Alter Proxy table==============================
+
+1, When table alter on the source the proxt table is out of sync
+   run comman - drop table dbo.<table_name>
+   
+2, Recreate proxy table
+   eg create proxy_table dbo.Payment external table at  'w151dbr06.crm.dbo.Payment'
+   
+3, Grant select to GRANT SELECT ON dbo.Payment TO read_un_limited
+   go
