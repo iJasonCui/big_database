@@ -423,19 +423,19 @@ go
 -- TABLE INSERT STATEMENTS
 --
 INSERT INTO dbo.PrimaryDB ( primaryDBId, primaryDBName, primarySRVName, primaryFlag, maintUserName, maintUserPass ) 
-		 VALUES ( 4, 'nycLL', 'v151dbp03ivr', 'Y', 'x2kmaint', 'UTT93AC' ) 
+		 VALUES ( 4, 'nycLL', 'v151dbp03ivr', 'Y', 'x2kmaint', '[PASSWORD]' ) 
 go
 INSERT INTO dbo.PrimaryDB ( primaryDBId, primaryDBName, primarySRVName, primaryFlag, maintUserName, maintUserPass ) 
-		 VALUES ( 5, 'torLL', 'v151dbp03ivr', 'Y', 'x2kmaint', 'UTT93AC' ) 
+		 VALUES ( 5, 'torLL', 'v151dbp03ivr', 'Y', 'x2kmaint', '[PASSWORD]' ) 
 go
 INSERT INTO dbo.PrimaryDB ( primaryDBId, primaryDBName, primarySRVName, primaryFlag, maintUserName, maintUserPass ) 
-		 VALUES ( 3, 'Profile_ai', 'w151dbp03', 'Y', 'webmaint', 'free2stay' ) 
+		 VALUES ( 3, 'Profile_ai', 'w151dbp03', 'Y', 'webmaint', [PASSWORD]' ) 
 go
 INSERT INTO dbo.PrimaryDB ( primaryDBId, primaryDBName, primarySRVName, primaryFlag, maintUserName, maintUserPass ) 
-		 VALUES ( 2, 'Profile_ar', 'w151dbp03', 'Y', 'webmaint', 'free2stay' ) 
+		 VALUES ( 2, 'Profile_ar', 'w151dbp03', 'Y', 'webmaint', [PASSWORD]' ) 
 go
 INSERT INTO dbo.PrimaryDB ( primaryDBId, primaryDBName, primarySRVName, primaryFlag, maintUserName, maintUserPass ) 
-		 VALUES ( 1, 'Profile_ad', 'w151dbp03', 'Y', 'webmaint', 'free2stay' ) 
+		 VALUES ( 1, 'Profile_ad', 'w151dbp03', 'Y', 'webmaint', [PASSWORD]' ) 
 go
 
 --
