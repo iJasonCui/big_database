@@ -23,23 +23,23 @@ server-id=2000
 
 on MASTER server:
 
-mysql> CREATE USER 'rep_user'@'%.int.interactivemedia.com' IDENTIFIED BY 'PASSWORD';
+mysql> CREATE USER 'rep_user'@'%.int.interactivemedia.com' IDENTIFIED BY '63vette';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'rep_user'@'%.int.interactivemedia.com';
 
 on master w151dbp10_4100
-mysql> CREATE USER 'rep_user'@'10.50.4.30' IDENTIFIED BY 'PASSWORD';
+mysql> CREATE USER 'rep_user'@'10.50.4.30' IDENTIFIED BY '63vette';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'rep_user'@'10.50.4.30';
 
 on master w151dbp10_4100
-mysql> CREATE USER 'rep_user'@'10.50.4.20' IDENTIFIED BY 'PASSWORD';
+mysql> CREATE USER 'rep_user'@'10.50.4.20' IDENTIFIED BY '63vette';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'rep_user'@'10.50.4.20';
 
 on MASTER w151dbp10_4100
-mysql> CREATE USER 'rep_user'@'10.10.96.221' IDENTIFIED BY 'PASSWORD';
+mysql> CREATE USER 'rep_user'@'10.10.96.221' IDENTIFIED BY '63vette';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'rep_user'@'10.10.96.221';
 
 on MASTER V151DBP04_7100
-mysql> CREATE USER 'rep_user'@'10.10.26.40' IDENTIFIED BY 'PASSWORD';
+mysql> CREATE USER 'rep_user'@'10.10.26.40' IDENTIFIED BY '63vette';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'rep_user'@'10.10.26.40';
 
 16.1.1.4. Obtaining the Replication Master Binary Log Coordinates
@@ -114,7 +114,7 @@ CHANGE MASTER TO
     MASTER_HOST='10.50.4.10',
     MASTER_PORT=4100,
     MASTER_USER='rep_user',
-    MASTER_PASSWORD='PASSWORD',
+    MASTER_PASSWORD='63vette',
     MASTER_LOG_FILE='w151dbp10_4100-bin.000012',
     MASTER_LOG_POS=501;
 
@@ -123,7 +123,7 @@ CHANGE MASTER TO
     MASTER_HOST='10.50.4.20',
     MASTER_PORT=4100,
     MASTER_USER='rep_user',
-    MASTER_PASSWORD='PASSWORD',
+    MASTER_PASSWORD='63vette',
     MASTER_LOG_FILE='w151dbp20_4100-bin.000009',
     MASTER_LOG_POS=4405019;
 
@@ -132,7 +132,7 @@ CHANGE MASTER TO
     MASTER_HOST='10.50.4.10',
     MASTER_PORT=4100,
     MASTER_USER='rep_user',
-    MASTER_PASSWORD='PASSWORD',
+    MASTER_PASSWORD='63vette',
     MASTER_LOG_FILE='w151dbp10_4100-bin.000012',
     MASTER_LOG_POS=1470;
 
@@ -171,5 +171,22 @@ mysql> STOP SLAVE; CHANGE MASTER TO MASTER_HOST=' '; RESET SLAVE;
 4. Lastly, restart your MySQL instance:
 # /etc/init.d/mysqld restart
 
+
+issue 1:
+
+
+Scenario Master – Master replication
+MasterA is a client facing server
+MasterB is a warm standby server (read only)
+MasterB restarted abruptly and when instances were braught back up MasterA (it’s slave) was showing the following error:
+MasterA has the following error in show slave status:
+Last_IO_Errno: 1236
+Last_IO_Error: Got fatal error 1236 from master when reading data from binary log: ‘Could not find first log file name in binary log index file’
+Solution:
+Slave: stop slave;
+Master: flush logs
+Master: show master status; — take note of the master log file and master log position
+Slave: CHANGE MASTER TO MASTER_LOG_FILE=’log-bin.00000X?, MASTER_LOG_POS=106;
+Slave: start slave;
 
  

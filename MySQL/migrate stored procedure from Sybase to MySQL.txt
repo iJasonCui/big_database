@@ -1,3 +1,62 @@
+#-------------
+# step 1:
+#-------------
+[jcui@gxcvs1 Content]$ mkdir Content
+pwd
+/home/jcui/web/javalife/mydb/sproc/Content
+
+#-------------------------------
+# step 2: defcopy from sybase 
+#-------------------------------
+./defncopy_reverse_engineer.sh w151dbp01 Content
+
+#-----------------------------------------------
+# step 3: make output/prodList from MDA tables
+#-----------------------------------------------
+g104iqdb01 
+
+set rowcount 0
+SELECT
+DBName,ProcName, count(*) as cn --, avg(ElapsedTime), max(ElapsedTime)  --performance
+FROM "mda_user"."proc_stats"
+WHERE SRVName = 'w151dbp01'
+  --AND ProcName in ('wsp_newJumpUser')
+  AND DBName = 'Content'
+  AND StartTime >= 'Jan 01 2013'
+-- AND ElapsedTime > 200
+group by DBName,ProcName
+order by DBName, cn desc
+
+#------------------------------------------------------
+# step 4: cp .sql into .mysql based on output/prodList
+#------------------------------------------------------
+
+[jcui@gxcvs1 Content]$ for i in `cat output/prodList`; do cp $i.sql $i.mysql ; done
+
+#------------------------------------------------------
+# step 5: convert_data2ascii.sh
+#------------------------------------------------------
+[jcui@gxcvs1 Content]$ ls *.mysql > sed_sp.list
+
+[jcui@gxcvs1 Content]./convert_data2ascii.sh
+
+#------------------------------------------------------
+# step 6: sed_stored_proc.sh
+#------------------------------------------------------
+[jcui@gxcvs1 Content]./sed_stored_proc.sh
+
+#------------------------------------------------------
+# step 7: wsp_GetDateGMT.mysql
+#------------------------------------------------------
+cp ../Plus45/wsp_ConvertDateGMT.mysql .
+cp ../Plus45/wsp_GetDateGMT.mysql .
+
+#------------------------------------------------------
+# step 8: createMyProc.sh into dev and test
+#------------------------------------------------------
+./createMyProc.sh 10.20.1.50 4010 Tracking prod
+
+
 ##------------------------------------------
 ## an example of Mysql store procedure
 ##------------------------------------------
@@ -199,6 +258,16 @@ MYSQL:
 
 SELECT TIMESTAMPDIFF(year, "1800-01-01", now());
 
+## Note 10.2:  DATEADD VS. TIMESTAMPADD
+
+SYBASE:
+
+SELECT @from_date = dateadd(month, -@months, getdate())
+
+MYSQL:
+
+SET at_from_date = TIMESTAMPadd(month, -at_months, NOW()) ;
+
 ## Note 11: temp table 
 
 sybase:
@@ -284,6 +353,68 @@ MYSQL:  select char_length("aaa,bbb");
 
 SYBASE: SUBSTRING(sessionId_in, wsIdx_in + 1, LEN(sessionId_in)) ;
 MYSQL : SET webServer_in = SUBSTR(sessionId_in, wsIdx_in + 1, CHAR_LENGTH(sessionId_in)) ;
+
+## note 18: DATETIME DEFAULT 
+
+SYBASE: GETDATE() CAN BE DEFAULT OF DATETIME TYPE COLUMNS
+
+MYSQL: NOW() CAN NOT be the default of datetime type columns
+
+
+Be Careful of stored procedure migrated from sybase to mysql, some datetime field is not listed explictly in sybase because of default getdate().
+it does not work on mysql.
+
+## note 19: WHILE LOOP 
+
+SYBASE:
+
+    WHILE (at_gender < 2)
+    BEGIN
+            IF at_gender = 0
+            BEGIN
+                SELECT at_genderChar = 'M'
+            END
+            ELSE
+            BEGIN
+                SELECT at_genderChar = 'F'
+            END
+
+            SELECT at_answer = 0
+            WHILE (at_answer < 4)
+            BEGIN
+                INSERT Vote (pollId, answerId, gender, counter) VALUES (at_publicationId, at_answer, at_genderChar, 0)
+                SELECT at_answer = at_answer + 1
+            END
+            SELECT at_gender = at_gender + 1
+        END
+    END
+
+MYSQL:
+
+DELIMITER $$
+DROP PROCEDURE IF EXISTS WhileLoopProc$$
+CREATE PROCEDURE WhileLoopProc()
+      BEGIN
+              DECLARE x  INT;
+              DECLARE str  VARCHAR(255);
+              SET x = 1;
+              SET str =  '';
+              WHILE x  <= 5 DO
+                          SET  str = CONCAT(str,x,',');
+                          SET  x = x + 1; 
+              END WHILE;
+              SELECT str;
+      END$$
+  DELIMITER ;
+
+#----------------------
+# note 20: CONVERT
+#----------------------
+
+
+
+
+
 
 
 

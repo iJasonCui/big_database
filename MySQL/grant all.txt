@@ -1,0 +1,70 @@
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.30.18.153' IDENTIFIED BY '63vette';
+
+#lilian
+GRANT SELECT ON *.* TO 'webmaint'@'192.168.25.195' IDENTIFIED BY 'free2stay'; 
+
+## web user
+GRANT EXECUTE ON *.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+
+## webmaint user
+GRANT SELECT ON *.* TO 'webmaint'@'%' IDENTIFIED BY 'free2stay';
+GRANT REPLICATION CLIENT ON *.* TO 'webmaint'@'%'; --for kevin's monitor
+
+
+GRANT EXECUTE ON *.* TO 'webmaint'@'%' IDENTIFIED BY 'free2stay';
+GRANT EXECUTE ON *.* TO 'webmaint'@'192.168.25.86' IDENTIFIED BY 'free2stay';
+
+##on server g151db01 10.20.1.50 port 4010 and 4020
+## dev
+#liliana
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'just4you';
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'Cliff2012';
+UPDATE mysql.user SET Password=PASSWORD('just4you') WHERE User='root';
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'192.168.25.86' IDENTIFIED BY 'free2stay';
+GRANT ALL PRIVILEGES  ON *.* TO 'webmaint'@'192.168.25.86' IDENTIFIED BY 'free2stay';
+
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'192.168.25.65' IDENTIFIED BY 'just4you';
+
+##on server g151db01 10.20.1.50 port 5010 and 5020
+## test
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'just4you';
+UPDATE mysql.user SET Password=PASSWORD('just4you') WHERE User='root';
+FLUSH PRIVILEGES;
+
+
+GRANT SELECT ON *.* TO 'webmaint'@'%' IDENTIFIED BY 'free2stay';
+
+##production
+
+##jason pc
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.25.65' IDENTIFIED BY '63vette';
+##wxdbmaint
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.10.86.73' IDENTIFIED BY '63vette';
+##gxcvs1
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.10.26.21' IDENTIFIED BY '63vette';
+#localhost
+GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'Cliff2012';
+
+## web user
+GRANT EXECUTE ON *.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT SELECT ON *.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON Plus45.MailBody TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+
+GRANT ALL ON SurveyPoll.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON SuccessStory.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON Content.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON ContentJava.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON Jump.jumpout_user TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON Jump.jump_user TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+GRANT ALL ON Jump.PublishTransUser TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+
+GRANT ALL ON Admin.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
+
+
+## webmaint user
+GRANT SELECT ON *.* TO 'webmaint'@'%' IDENTIFIED BY 'free2stay';
+GRANT REPLICATION CLIENT ON *.* TO 'webmaint'@'%'; 
+--for kevin's monitor
+
