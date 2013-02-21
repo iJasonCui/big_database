@@ -1,0 +1,44 @@
+README for the SyBooks[tm] CD-ROM for Linux
+version 1.0
+
+
+What's On This CD
+-----------------
+
+Product documentation is provided on the SyBooks[tm] CD in a platform-
+independent bookshelf that contains fully searchable, HTML-based
+documentation and PDF files.
+ 
+Some documentation is provided in PDF files. To view the PDF files, you
+must have Acrobat Reader installed on your machine. Go to
+http://www.adobe.com to download Acrobat Reader. PDF files can be
+accessed through the PDF directory on the SyBooks CD.
+
+You can also access all documentation on the Sybase Manuals website
+(www.sybase.com/support/manuals).
+
+
+Installation Notes
+------------------
+On Linux, mount the CD and execute the SyBooks installation by
+running the setupLinux command.  After installation, you can launch
+the SyBooks bookshelf at any time.  Navigate to the
+<installation directory>/SyBooks/<your product> and run sybooks.sh.
+Please refer to the Installation Guide for detailed instructions.
+
+To view documentation on other UNIX platforms, insert the CD and use the
+appropriate UNIX version of Acrobat Reader to view the PDF files contained
+in the PDF directory.
+
+
+Uninstalling SyBooks
+--------------------
+1. Initiate the InstallShield wizard in the
+   <installation directory>/SyBooks/<your_product>/uninstallers directory
+   by running ./uninstall.
+2. Follow the uninstallation instructions in the InstallShield wizard.
+3. Click Finish when the uninstall is successful.
+4. Delete any files remaining in the <installation directory>/SyBooks
+   directory.
+
+

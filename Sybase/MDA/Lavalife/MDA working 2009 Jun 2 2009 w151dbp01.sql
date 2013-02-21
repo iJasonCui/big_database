@@ -1,31 +1,12 @@
 set rowcount 0
-SELECT --*
-DBName,ProcName, count(*) as cn, avg(ElapsedTime), max(ElapsedTime) 
+SELECT
+DBName,ProcName, count(*) as cn --, avg(ElapsedTime), max(ElapsedTime)  --performance
 FROM "mda_user"."proc_stats"
-WHERE SRVName = 'w151dbp01'
-  AND ProcName in (
-'wsp_newJumpUser',
-'wsp_updJumpUserByCookieId',
-'wsp_getJumpUserCookieByCId',
-'wsp_saveAffiliateUser',
-'wsp_updPublishUserByCookieId',
-'wsp_saveAssociateCookie',
-'wsp_saveAssociateCJCookie',
-'wsp_saveAssociateBAMCookie',
-'wsp_saveAssociateSEMCookie',
-'wsp_updAssociateCookieUserId',
-'wsp_updAssociateCJCookieUserId',
-'wsp_updAssociateBAMCookieUId',
-'wsp_updAssocSEMCookieUserId',
-'wsp_getSiteInfoByCookieId',
-'wsp_getSiteInfoCJByCookieId',
-'wsp_getSiteInfoBAMByCookieId',
-'wsp_getSiteInfoSEMByCookieId',
-'wsp_getAssociateAdCode')
---and ProcName = 'gsp_cfgGetLocationSpc'
+WHERE SRVName in ('w151dbp01', 'w151dbp02')
+  --AND ProcName in ('wsp_newJumpUser')
   --AND DBName != 'SMSGateway'
-  --AND DBName = 'Jump'
-  AND StartTime >= 'apr 14 2009'
+  AND DBName in ( 'SuccessStory', 'Jump', 'Content', 'ContentJava', 'SurveyPoll', 'SuccessStory', 'Tracking' )
+  AND StartTime >= 'Jan 1 2011'
 --  AND StartTime <  'May 8 2009'
 -- AND ElapsedTime > 200
 --ORDER BY StartTime desc

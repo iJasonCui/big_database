@@ -23,46 +23,28 @@ fi
 #------------------------------------------------------# 
 
 #----------------------#
-#  IVR
-#----------------------#
-
-for DB_SRV in v151dbp01ivr v151dbp03ivr v151db20 
-do 
-    ./bcpout_load_mda_user_proc_stats.sh ${DB_SRV} 
-done
-
-#----------------------#
 #  WEB
 #----------------------#
-#webdb1g webdb0t webdb1d webdb0g
+# webdb1g webdb1d 
 
-for DB_SRV in w151dbr01 w151dbp01 w151dbp02 w151dbp04 w151dbp03 w151dbp06 w151dbr02 w151dbr03 
+#for DB_SRV in w151dbr01 w151dbp01 w151dbp02 w151dbp04 w151dbp03 w151dbp06 w151dbr02 w151dbr03 w151dbr06  w151dbp05
+for DB_SRV in `cat loadMDAStats.ini`
 do
-    ./bcpout_load_mda_user_proc_stats.sh ${DB_SRV}
+    ./bcpout_load_mda_user_proc_stats_server.sh ${DB_SRV}
 done
 
 #----------------------#
 #  Mobile
 #----------------------#
 
-for DB_SRV in m151devdb01sms  
-do
-    ./bcpout_load_mda_user_proc_stats.sh ${DB_SRV}
-done
-
 #----------------------#
 #  CCD
 #----------------------#
+#  c151dbp07pgs c151dbp07
 
-for DB_SRV in c151dbp02pgs c151dbp03pgs 
-do
-    ./bcpout_load_mda_user_proc_stats.sh ${DB_SRV}
-done
-
-## ivrdb1r 
-## v151db20 
-## v151dbp02mob 
-## v151tstdb01 
+##for DB_SRV in c151dbp06pgs c151dbp06  
+##do
+##    ./bcpout_load_mda_user_proc_stats.sh ${DB_SRV}
+##done
 
 exit 0
-
