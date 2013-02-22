@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 . $HOME/.bash_profile
 
@@ -7,6 +7,7 @@
 #  exit 1
 #fi
 
+
 #
 # Initialize arguments
 #
@@ -14,8 +15,11 @@
 DatabaseName=MonitorBackupP
 Server=opsdb1p
 
-Password=`cat $HOME/.sybpwd | grep -w $Server | awk '{print $2}'`
-isql -S${Server} -Ucron_sa -P${Password} <<EOF1
+
+
+. /home/sybase/.bash_profile 
+Password=`cat $HOME/.sybpwd | grep $DSQUERY | awk '{print $2}'`
+$SYBASE/$SYBASE_OCS/bin/isql -S${Server} -Ucron_sa -P${Password} <<EOF1
 select getdate()
 go
 

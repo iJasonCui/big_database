@@ -18,7 +18,8 @@ echo "FLE : $passfile\n";
 //DB Connection information
 $cnn = @sybase_connect("opsdb1p","$userName","$userPassword") or die("Could not connect to opsdb1p,$userName,$userPassword !\n\n\n");
 
-//echo "cnn =$cnn\n";
+echo "cnn =$cnn\n";
+echo "$userName $userPassword";
 
 //Select Database...
 @sybase_select_db("MonitorBackupP");

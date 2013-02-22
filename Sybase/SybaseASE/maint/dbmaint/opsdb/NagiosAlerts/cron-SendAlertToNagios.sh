@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## Date Aug 17 ,2004
 ## Author Erick Sanchez
 ## Script Name = SendAlertToNagios.sh
@@ -8,12 +8,14 @@
 DatabaseName=MonitorBackupP
 Server=opsdb1p
 
-. $HOME/.bash_profile
-Password=`cat $HOME/.sybpwd | grep -w  $Server | awk '{print $2}'`
+
+
+. /home/sybase/.bash_profile
+Password=`cat $HOME/.sybpwd | grep $DSQUERY | awk '{print $2}'`
 
 ## Insert Data Into AlertTemp from Alert Where nagiosIndicator = N and update Alert NagiosIndicator = Y ## 
 ##  Second Process insert into BcpAlert Table from AlertTemp where a log file will be created and send to nagios.
-isql -S${Server} -Ucron_sa -P${Password} <<EOF1
+$SYBASE/$SYBASE_OCS/bin/isql -S${Server} -Ucron_sa -P${Password} <<EOF1
 
 use ${DatabaseName}
 go
