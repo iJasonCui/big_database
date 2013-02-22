@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#for i in `cat jason.ini` 
+#do
+ 
+sqsh -Usa -Swebdb0r -P63vette << EOQ1 
+
+use wp_report
+go
+ 
+select name from sysobjects where type = "U" and name like "temp_jason_%"
+\do
+\echo "select on #1 "
+select * from #1 
+\bcp DeferredRevenue..#1 -Usa -P63vette -Sasedb1d -b 10000 
+go
+\done
+
+
+go
+
+EOQ1
+
+
+exit 0

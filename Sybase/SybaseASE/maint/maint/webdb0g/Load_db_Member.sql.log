@@ -1,0 +1,144 @@
+========================
+                    
+ -------------------
+ Feb 27 2005 11:35PM
+Backup Server session id is:  28.  Use this value when executing the
+'sp_volchanged' system stored procedure after fulfilling any volume change
+request from the Backup Server.
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-1'
+
+(1 row affected)
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-4'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-5'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-6'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-2'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-9'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-10'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-3'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-8'
+Backup Server: 6.28.1.1: Dumpfile name 'Member0505804A13 ' section number 1
+mounted on disk file '/webdb0r_nfs/data/dump/webdb27p/Member/Member-dba-7'
+Backup Server: 4.58.1.1: Database Member: 86570 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 173102 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 259634 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 346166 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 432698 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 519230 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 605762 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 692294 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 778826 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 865358 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 951890 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1037656 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1124188 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1208160 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1293160 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1376620 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1460334 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1544560 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1628532 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1713270 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1782138 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1861758 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 1941634 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2024582 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2111114 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2197646 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2283670 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2369948 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2456226 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2542758 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2629290 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2716330 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2803370 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2889902 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 2976434 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3062966 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3106232 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3192764 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3279296 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3365828 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3452360 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3538892 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3625170 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3711702 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3798234 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3884512 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 3971044 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4057830 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4144362 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4230386 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4291242 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4378374 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4454892 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4541424 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4625214 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4732112 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4798528 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4870138 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 4954298 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5034054 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5120644 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5223882 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5298858 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5390192 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5472684 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5549170 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5621270 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5715954 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5789214 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5887236 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 5976562 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6050640 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6141948 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6235306 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6318834 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6379390 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6473466 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6558790 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6628188 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6724672 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6807962 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6880658 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 6993304 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7050520 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7161430 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7219010 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7313842 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7394154 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7480686 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7567218 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7653750 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7740282 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7826814 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7913346 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 7999878 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8091946 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8149806 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8256314 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8305982 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8393562 kilobytes LOADed.
+Backup Server: 4.58.1.1: Database Member: 8394100 kilobytes LOADed.
+Backup Server: 3.42.1.1: LOAD is complete (database Member).
+Redo pass: 6000 records done (38%); 9390 records left.
+Redo pass: 12000 records done (77%); 3390 records left.
+Redo pass of recovery has processed 3643 committed and 0 aborted transactions.
+Use the ONLINE DATABASE command to bring this database online; SQL Server will
+not bring it online automatically.
+                    
+ -------------------
+ Feb 27 2005 11:48PM
+========================
+
+(1 row affected)
+Database 'Member' is now online.
+========================
