@@ -1,4 +1,7 @@
-#!/bin/bash  
+#!/bin/bash
+
+. $HOME/.bash_profile
+
 set -x
 
 # 
@@ -50,7 +53,7 @@ set -x
 # adCode added as per Barry on Jun-21-2010:
 # 219259 
 #
-. $HOME/.profile
+#. $HOME/.profile
 
 #----------------------------------------#
 # check number of parameters
@@ -81,15 +84,28 @@ TO_DATE=${4:-`date +%Y%m%d`}
 SOURCE_USER=cron_sa
 TEMP_TABLE=DNIS_00084NE 
 
+#---------------------------------------#
+# this is a MS SQL server
+# connecting with freetDS . (/etc/odbcinst.ini and /etc/freetds.conf) 
+#---------------------------------------#
+
+FMG_USER=cron_sa
+FMG_SRV=FMG_REPORT
+FMG_PASSWD=`cat $HOME/.sybpwd | grep -w ${FMG_SRV} | awk '{print $2}'`
+FMG_DB=Reports
+FMG_VIEW=v_IVRActivity
+
 DEST_USER=cron_sa
-DEST_SRV=ivrdb1r
+DEST_SRV=v151dbp03ivr
 DEST_PASSWD=`cat $HOME/.sybpwd | grep -w ${DEST_SRV} | awk '{print $2}'`
-DEST_DB=DR_IVRmonthly
+DEST_DB=mda_db
 
 
-WORK_DIR=/opt/etc/sybase12_52/maint/NE_Triton
+##WORK_DIR=/opt/etc/sybase12_52/maint/NE_Triton
+WORK_DIR=/opt/scripts/maint/NE_Triton
 OUT_DIR=${WORK_DIR}/output
 LOG_DIR=${WORK_DIR}/logs
+BCP_DIR=/data/dump/StagingFiles/NE_Triton
 
 RUN_DATE_TIME=`date '+%Y%m%d_%H%M%S'`
 LOG_FILE=${LOG_DIR}/${0}.${FROM_DATE}.${RUN_DATE_TIME}
@@ -105,6 +121,8 @@ MAIL_DETAILS="${OUT_DIR}/${FROM_DATE}.details.mail"
 TMP_FILE="${LOG_DIR}/${FROM_DATE}.tmp"
 
 ERROR_CODE=0
+
+cd ${WORK_DIR}
 
 #-----------------------------------------#
 # Function: run_sql () 
@@ -183,6 +201,10 @@ else
    echo "use ${DEST_DB} " >> ${SQL_FILE}
    echo 'go' >> ${SQL_FILE}
    echo "truncate table NECallLogSentBuffer  " >> ${SQL_FILE}
+   echo 'go' >> ${SQL_FILE}
+   echo "truncate table NECallLogSentBufferFMG  " >> ${SQL_FILE}
+   echo 'go' >> ${SQL_FILE}
+   echo "truncate table NECallLogFMG_REPORT  " >> ${SQL_FILE}
    echo 'go' >> ${SQL_FILE}
    echo "exec p_checkBatchLogNE ${FROM_DATE}, ${TO_DATE} " >> ${SQL_FILE} 
    echo 'go' >> ${SQL_FILE}
@@ -390,6 +412,83 @@ else
 
 fi
 
+#------------------------------------------------------#
+# Step 3.1:
+# freebcp out from FMG_REPORT SERVER; Reports database; View v_IVRActivity; 
+# bcp into destination buffer table
+# In addition, update Batch log
+#------------------------------------------------------#
+
+#------------------------------------------------------#
+# 
+# CREATE VIEW v_IVRActivity AS
+# SELECT startTime, ANI, Dnis, Duration, gender, 0 as boxnum, acctNum, citycode, 0 as partnershipId,
+#        0 as howMuchTimeUsed, citycode as account_region, 0 as accountId, 0 as adCode, 0 as closingBalance
+#  FROM  Reports..IVRActivity 
+# WHERE  cityCode in (944,945)
+#  AND  starttime >= 'Dec 12 2012'
+#  AND  starttime >= DATEADD(dd, -30, getdate()) 
+#
+#-----------------------------------------------------#
+
+echo "#-------------------------------------------------------#" >> ${LOG_FILE}
+
+if [ ${ERROR_CODE} -ne 0 ]; then
+   echo "Step 3.1 - freebcp from FMG_REPORT ; Reports ; View v_IVRActivity to NECallLogSentBuffer, skipped." >> ${LOG_FILE}
+else
+   echo "Step 3.1 - freebcp from FMG_REPORT ; Reports ; View v_IVRActivity to NECallLogSentBuffer ...  " >> ${LOG_FILE}
+
+   # freebcp Reports..v_IVRActivity out /data/dump/StagingFiles/NE_Triton/v_IVRActivity.out -SFMG_REPORT -Ucron_sa -P63vette
+   # -c -t "|" -r "|@|\n" -e /data/dump/StagingFiles/NE_Triton/v_IVRActivity.err 
+
+   freebcp ${FMG_DB}..${FMG_VIEW} out ${BCP_DIR}/${FMG_VIEW}.OUT -S${FMG_SRV} -U${FMG_USER} -P${FMG_PASSWD} \
+           -c -t "|" -r "|@|\n" -e ${BCP_DIR}/${FMG_VIEW}.ERR
+
+  ## if [ -f ${BCP_DIR}/${FMG_VIEW}.ERR ]; then
+         
+  ## fi
+
+   bcp ${DEST_DB}..NECallLogFMG_REPORT in ${BCP_DIR}/${FMG_VIEW}.OUT -S${DEST_SRV} -U${DEST_USER} -P${DEST_PASSWD} \
+       -c -t "|" -r "|@|\n" -e ${BCP_DIR}/${FMG_VIEW}.in.err
+
+
+   SQL_FILE="${LOG_DIR}/${FROM_DATE}.sql.step31"
+   OUT_FILE="${LOG_DIR}/${FROM_DATE}.out.step31"
+
+      # ... compose sql
+   echo 'set nocount on' > ${SQL_FILE}
+   echo 'go' >> ${SQL_FILE}
+   echo "select c.start_time,c.ani,c.dnis,c.duration,c.gender, c.boxnum,c.accountnum, c.region, c.partnershipId, " >> ${SQL_FILE}
+   echo "       c.howMuchTimeUsed, c.account_region, c.accountId, c.adCode, c.closingBalance, ${BATCH_ID}    " >> ${SQL_FILE}
+   echo "from   ${DEST_DB}..DNIS_00084NE t, ${DEST_DB}..NECallLogFMG_REPORT c " >> ${SQL_FILE}
+   echo "where  c.start_time >= convert(datetime, convert(varchar(40),${FROM_DATE}))   " >> ${SQL_FILE}
+   echo "  and  c.start_time <  convert(datetime, convert(varchar(40),${TO_DATE}))     " >> ${SQL_FILE}
+   echo "  and  SUBSTRING(t.dnis,3,10) = c.dnis " >> ${SQL_FILE}
+   echo "\bcp ${DEST_DB}..NECallLogSentBufferFMG -U${DEST_USER} -S${DEST_SRV} -P${DEST_PASSWD} -b 1000 " >> ${SQL_FILE}
+   echo 'go' >> ${SQL_FILE}
+   echo "select @@rowcount " >> ${SQL_FILE}
+   echo 'go' >> ${SQL_FILE}
+
+      # ... run sql
+      run_sql sqsh ${DEST_SRV} ${DEST_DB} ${DEST_USER} ${DEST_PASSWD} \
+                   ${SQL_FILE} ${OUT_FILE} ${TMP_FILE} ${LOG_FILE}
+
+      # ... handle errors
+      ERROR_CODE=$?
+
+      echo "#---------------------#" >> ${LOG_FILE}
+      echo ${SOURCE_SRV}  >> ${LOG_FILE}
+      echo ${SOURCE_DB}  >> ${LOG_FILE}
+
+      if [ ${ERROR_CODE} -eq 0 ]; then
+         echo "  ... succeeded sqsh bcp at `date`." >> ${LOG_FILE}
+      else
+         echo "  ... Failed sqsh bcp  , error ${ERROR_CODE}.">> ${LOG_FILE}
+      fi
+
+
+fi
+
 #--------------------------------------------------------------------#
 # Step 4:
 # INSERT into NECallLogSent and then summarize into NECallLogSentSum  
@@ -452,8 +551,8 @@ else
    echo "select '[From_date (GMT)]', convert(datetime, convert(varchar(20),${FROM_DATE})) " >> ${SQL_FILE}
    echo "select '[To_date   (GMT)]', convert(datetime, convert(varchar(20),${TO_DATE})) " >> ${SQL_FILE} 
    echo "print '==================================='"  >> ${SQL_FILE}
-   echo "SELECT adCode as handShake,sum(totalMinutes) as totalMinutes, sum(totalCalls) as totalCalls "  >> ${SQL_FILE}
-   echo "FROM NECallLogSentSum WHERE batchId = ${BATCH_ID} and adCode!=25 GROUP BY adCode " >> ${SQL_FILE}
+   echo "SELECT ani, sum(totalMinutes) as totalMinutes, sum(totalCalls) as totalCalls "  >> ${SQL_FILE}
+   echo "FROM NECallLogSentSum WHERE batchId = ${BATCH_ID} and adCode!=25 GROUP BY ani ORDER BY ani" >> ${SQL_FILE}
    echo "print '==================================='"  >> ${SQL_FILE}
    echo 'go' >> ${SQL_FILE}
    echo "print '==================================='"  >> ${SQL_FILE}  
