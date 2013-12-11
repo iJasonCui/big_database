@@ -1,3 +1,19 @@
+how to install sybase ase 157
+
+1. go to sybase web site https://sybase.subscribenet.com/control/sybs/download?element=4270541
+2. enter user name and password
+3. find the product cd and copy the link
+4. on the linux server g151db01, wget "[the link]"
+cd /ccs; wget  "https://esdhttp.flexnetoperations.com/cgi-bin/download?rid=2687818211&rp=DTM20131209211548OTg1MzEwNTgy"
+
+5. tar -xvf ase1570_linx8664_64_02.tgz
+6. /usr/sbin/useradd sybase157
+7. passwd sybase157
+8. At the command line, enter:
+./setup.bin -i console
+
+9. 
+
 
 
 pre-install
@@ -30,7 +46,7 @@ maxfilelimit  4096
 nfile     10000 (函数)
 
 
-内核配置--驱动程序
+
 asyncdisk - In
 rebuild kernel
 
@@ -54,7 +70,7 @@ CHAPTER 2 Installing Adaptive Server
 sample:
 /etc/setprivgrp sybase MLOCK
 
-华隆产权
+
 
 
 PATH=$PATH:/usr/local/bin:/usr/ccs/bin:/usr/bin:/usr/ucb:/etc:.

@@ -1,4 +1,6 @@
+--===============
 --both
+--===============
 use tempdb
 go
 /*
@@ -26,7 +28,6 @@ CREATE TABLE dbo.sysloginsSource
 )
 */
 --ASE 15
-
 CREATE TABLE dbo.sysloginsSource
 (
     suid          int            NOT NULL,
@@ -56,30 +57,29 @@ CREATE TABLE dbo.sysloginsSource
 LOCK DATAROWS
 go
 
-
 CREATE TABLE dbo.sysloginrolesSource
 (
     suid   smallint NOT NULL,
     srid   smallint NOT NULL,
     status smallint NOT NULL
 )
-
+--======================
 --source
+--=======================
 insert tempdb..sysloginsSource
 select  * from  master..syslogins where suid > = 3
 
 insert tempdb..sysloginrolesSource
 select * from  master..sysloginroles where suid > = 3
 
+--==================
 --dest
-
-
+--==================
 insert master..syslogins
 select * from tempdb..sysloginsSource where suid > = 3
 
 insert master..sysloginroles
 select * from tempdb..sysloginrolesSource where suid > = 3
-
 
 select * from  master..sysloginroles where suid > = 3 and suid < 23
 --delete from  master..sysloginroles where suid > = 3 and suid < 23
@@ -90,9 +90,7 @@ select * from master..syslogins where suid = 27
 --dest
 --delete  from master..sysloginroles where suid = 1 and status = 0
 select * from master..sysloginroles where suid = 1 and status = 0
-
-
-update master..syslogins set name = "ccdmaint" where suid = 27
+--update master..syslogins set name = "ccdmaint" where suid = 27
 
 
 

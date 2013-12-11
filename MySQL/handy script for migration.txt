@@ -94,7 +94,9 @@ mysqld_safe --defaults-file=/etc/g151db01_4020.cnf &
 
 mysqldump -d -h127.0.0.1 -P4010 -uroot -p --database Plus45 --add-drop-table >g151db01_4010_Plus45.dump
 mysqldump -d -h127.0.0.1 -P4010 -uroot -p --database Plus45  >g151db01_4010_Plus45.dump
-scp g151db01_4010_Plus45.dump jcui@gxcvs1:/home/jcui/web/javalife/mydb/scripts/initial/
+mysqldump -d -h127.0.0.1 -P4010 -uroot -p --database Profile_ad --add-drop-table >g151db01_4010_Profile_ad.dump
+
+scp -p g151db01_4010_Profile_a*.dump jcui@gxcvs1:/home/jcui/web/javalife/mydb/scripts/initial/
 
 #---------------------
 
@@ -112,11 +114,12 @@ chown -R mysql:mysql /data/w151dbp20_vol_1
 [sybase@ivrdb1r:/data/dumps/software]$ scp create_table_Chargeback.mysql jcui@gxcvs1:/home/jcui/web/javalife/mydb/scripts/initial
 
 
-:%s/float/decimal/g 
-:%s/numeric/decimal/g 
+%s/float/decimal/g 
+%s/numeric/decimal/g 
 %s/decimal(10,0) not null auto_increment/int not null auto_increment/g
 %s/decimal(12,0) not null auto_increment/int not null auto_increment/g
 %s/getdate()/19000101/g
+%s/Jan 1 1970/1970-01-01/g
 %s/ show / `show` /g
 %s/dbo.//g
 
