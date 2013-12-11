@@ -122,7 +122,6 @@ BEGIN
      WHERE p.userId = userId_in AND
            p.userId = n.userId ;
 
-
 END;;
 DELIMITER ;
 
@@ -227,7 +226,6 @@ SET [GLOBAL | SESSION] TRANSACTION ISOLATION LEVEL
      | READ UNCOMMITTED
      | SERIALIZABLE
    }
-
 
   SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED ;
   SELECT userId, count(*) AS commentCount
@@ -486,4 +484,15 @@ ON UserEvent.userEventId = tmpUserEvent.userEventId ;
 
 
 
+#--------------------------------------------------------
+# note 25: RESERVED WORD
+#--------------------------------------------------------
+
+use backticks(`) NOT quotation (') around column names when you use reserved keywords in query:
+
+INSERT INTO users (`name`,`group`) VALUES ('John', '9')
+
+#----------------------------------------------------------
+# regular expression
+#----------------------------------------------------------
 

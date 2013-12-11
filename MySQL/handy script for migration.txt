@@ -140,3 +140,16 @@ mysql -Nse 'show tables' Plus45 -h10.10.26.40 -P7100 -uroot -p63vette | while re
 mysql -Nse 'show tables' Plus45 -h10.50.4.30 -P7100 -uroot -p63vette | while read table; do mysql -e "select count(*) from $table" Plus45 -h10.50.4.30 -P7100 -uroot -p63vette ; done
 
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED ;
+
+#--------------------------
+# mysql system table
+#---------------------------
+
+select  TABLE_NAME, ENGINE from information_schema.tables where table_schema in ('sms_stats');
+
+SELECT ROUTINE_NAME FROM INFORMATION_SCHEMA.ROUTINES 
+WHERE ROUTINE_TYPE="PROCEDURE"  AND ROUTINE_SCHEMA="Profile_ar" 
+and ( ROUTINE_NAME like 'wsp_upd%' or ROUTINE_NAME like 'wsp_new%' or ROUTINE_NAME like 'wsp_save%' or ROUTINE_NAME like 'wsp_del%' or ROUTINE_NAME like 'wsp_add%' );
+
+
+
