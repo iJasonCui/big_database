@@ -233,7 +233,7 @@ else
 
     if [ -e ${WORK_DIR}/${OUT_FILE} ]
     then
-        rm ${WORK_DIR}/${OUT_FILE}
+        rm -f ${WORK_DIR}/${OUT_FILE}
     fi
 
     # ... compose sql
@@ -284,9 +284,9 @@ else
     SQL_FILE="${SCRIPT_NAME}.mysql.step2"
     OUT_FILE="${SCRIPT_NAME}.out.step2"
 
-    if [ -e ${WORK_DIR}/${OUT_FILE} ]
+    if [ -e "${WORK_DIR}/${OUT_FILE}" ]
     then
-        rm ${WORK_DIR}/${OUT_FILE}
+        rm -f ${WORK_DIR}/${OUT_FILE}
     fi
 
     # ... compose sql
@@ -335,9 +335,9 @@ do
     SQL_FILE="${SCRIPT_NAME}.mysql.step3"
     OUT_FILE="${SCRIPT_NAME}.out.step3"
 
-    if [ -e ${WORK_DIR}/${OUT_FILE} ]
+    if [ -e "${WORK_DIR}/${OUT_FILE}" ]
     then
-        rm ${WORK_DIR}/${OUT_FILE}
+        rm -f ${WORK_DIR}/${OUT_FILE}
     fi
 
 
