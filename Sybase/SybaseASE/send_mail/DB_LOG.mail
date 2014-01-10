@@ -1,5 +1,0 @@
-Host name: thumper, host process: 27131, date: Thu Jan 13 14:34:57 EST 2005
-/opt/sybase/sqlserver/P02S/scripts/maint/run_scripts/run_proc.sh error: SQL stored procedure /opt/sybase/sqlserver/P02S/scripts/maint/require_scripts/MissingProc call failed at P02S.DB_LOG, suspicious words found in the isql output file:
-Msg 102, Level 15, State 1:
-Server 'P02S', Line 2:
-Incorrect syntax near '/'.
