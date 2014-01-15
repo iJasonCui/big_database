@@ -1,7 +1,6 @@
 DELIMITER ;;
 DROP PROCEDURE IF EXISTS  wsp_newPurchase;
 CREATE DEFINER='root'@'10.10.26.21' PROCEDURE wsp_newPurchase (
-
 /******************************************************************************
 **
 ** CREATION:
@@ -21,8 +20,8 @@ CREATE DEFINER='root'@'10.10.26.21' PROCEDURE wsp_newPurchase (
 ******************************************************************************/
    at_userId                    DECIMAL(12,0),
    at_xactionId                 INT,
-   at_xactionTypeId             TINYINT,
-   at_purchaseTypeId            TINYINT,
+   at_xactionTypeId             INT,
+   at_purchaseTypeId            INT,
    at_cost                      DECIMAL(10,2),
    at_tax                       DECIMAL(10,2),
    at_costUSD                   DECIMAL(5,2),
@@ -30,7 +29,7 @@ CREATE DEFINER='root'@'10.10.26.21' PROCEDURE wsp_newPurchase (
    at_purchaseOfferDetailId     SMALLINT,
    at_subscriptionOfferDetailId SMALLINT,
    at_billingLocationId         SMALLINT,
-   at_currencyId                TINYINT,
+   at_currencyId                INT,
    at_creditCardId              INT,
    at_paymentNumber             VARCHAR(40),
    at_cardProcessor             CHAR(1),
@@ -45,11 +44,13 @@ DECLARE at_dateNowGMT DATETIME;
 DECLARE EXIT HANDLER FOR SQLWARNING
 BEGIN
    ROLLBACK;
+   SELECT 96;
 END;
 
 DECLARE	EXIT HANDLER FOR SQLEXCEPTION
 BEGIN
    ROLLBACK;
+   SELECT 96;
 END;
 
 SET at_dateNowGMT = UTC_TIMESTAMP();
@@ -95,12 +96,13 @@ INSERT INTO Purchase(xactionId,
           at_taxCountryId,
           at_taxJurisdictionId);
 
-IF (at_creditCardId > 0) THEN 
+IF (at_creditCardId > 0) 
+THEN 
    UPDATE CreditCard SET dateLastUsed = at_dateNowGMT WHERE creditCardId = at_creditCardId;
 END IF;
 
 COMMIT;
+SELECT 0;
 
-/* ### DEFNCOPY: END OF DEFINITION */
 END;;
 DELIMITER ;

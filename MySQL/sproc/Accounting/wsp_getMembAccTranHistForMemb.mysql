@@ -24,7 +24,6 @@ CREATE DEFINER='root'@'10.10.26.21' PROCEDURE wsp_getMembAccTranHistForMemb (
      at_userId DECIMAL(12,0)
     ,at_dateCreated DATETIME
 )
-
 BEGIN
 
     SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
@@ -36,29 +35,25 @@ BEGIN
           ,a.credits
           ,a.balance
           ,a.dateCreated
-          ,cost =
-            CASE pd.cost 
+          , CASE pd.cost 
                WHEN null THEN p.cost 
                ELSE pd.cost 
-            END
-          ,tax =
-            CASE pd.tax 
+            END as cost
+          , CASE pd.tax 
                WHEN null THEN p.tax 
                ELSE pd.tax
-            END
+            END AS tax
           ,a.description
           ,p.billingLocationId
           ,p.purchaseOfferDetailId
           ,p.purchaseTypeId
           ,p.currencyId 
-      -- FROM AccountTransaction a ( INDEX XAK1AccountTransaction) , PurchaseCreditDetail pd, Purchase p
-FROM AccountTransaction a 
+     FROM AccountTransaction a 
      LEFT JOIN Purchase p ON a.xactionId = p.xactionId 
      LEFT JOIN PurchaseCreditDetail pd ON p.xactionId = pd.xactionId
-     WHERE a.userId = at_userId
-       AND a.dateCreated >= at_dateCreated
-    ORDER BY xactionId;
+    WHERE a.userId = at_userId
+      AND a.dateCreated >= at_dateCreated
+    ORDER BY a.xactionId;
 
-/* ### DEFNCOPY: END OF DEFINITION */
 END;;
 DELIMITER ;
