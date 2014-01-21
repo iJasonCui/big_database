@@ -1,7 +1,27 @@
+## vocomo user from 10.209.10.82 and 10.209.10.80 onto  172.17.17.23 port 6010
+GRANT EXECUTE ON *.* TO 'vocomo'@'10.209.10.%' IDENTIFIED BY 'free2stay';
+GRANT SELECT ON *.* TO 'vocomo'@'10.209.10.%' IDENTIFIED BY 'free2stay';
+
+
+## TK weekly sales report
+##http://172.25.6.210/reports/weekly/weeklySalesSummary.html
+## user: report;  2viewNow
+GRANT SELECT ON *.* TO 'webmaint'@'172.25.6.210' IDENTIFIED BY 'free2stay'; 
+GRANT SELECT ON *.* TO 'webmaint'@'172.25.8.%' IDENTIFIED BY 'free2stay'; 
+
 # shew
 GRANT SELECT ON *.* TO 'sleong'@'172.25.8.101' IDENTIFIED BY 'free2stay'; 
 GRANT SELECT ON *.* TO 'sleong'@'172.25.8.65' IDENTIFIED BY 'free2stay'; 
 
+## Andy Rohan
+## 172.17.17.23 port 5010
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.25.8.84' IDENTIFIED BY 'andy123';
+
+
+## Brendon
+## 172.17.17.23 port 5010
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.25.8.94' IDENTIFIED BY 'brendon123';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.25.8.113' IDENTIFIED BY 'brendon123';
 
 #
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.30.18.153' IDENTIFIED BY '63vette';
@@ -48,6 +68,7 @@ GRANT ALL PRIVILEGES  ON *.* TO 'webmaint'@'172.25.8.78' IDENTIFIED BY 'free2sta
 ## test
 GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'just4you';
 UPDATE mysql.user SET Password=PASSWORD('just4you') WHERE User='root';
+UPDATE mysql.user SET Password=PASSWORD('just4you') WHERE User= 'root@127.0.0.1';
 FLUSH PRIVILEGES;
 
 
@@ -69,6 +90,7 @@ GRANT ALL PRIVILEGES  ON *.* TO 'root'@'127.0.0.1' IDENTIFIED BY 'Cliff2012';
 GRANT ALL PRIVILEGES  ON *.* TO 'cron_sa'@'127.0.0.1' IDENTIFIED BY '63vette';
 GRANT ALL PRIVILEGES  ON *.* TO 'cron_sa'@'192.168.27.62' IDENTIFIED BY '63vette';
 GRANT ALL PRIVILEGES  ON *.* TO 'cron_sa'@'10.209.10.98' IDENTIFIED BY '63vette';
+GRANT ALL PRIVILEGES  ON *.* TO 'cron_sa'@'10.209.10.101' IDENTIFIED BY '63vette';
 
 #arch_vocomo 5100 on vocomo_master2
 # liliana
@@ -100,6 +122,7 @@ GRANT ALL ON Profile_wi.SavedSearch TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
 
 GRANT ALL ON Admin.* TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
 
+GRANT ALL ON *.MailBody TO 'web'@'%' IDENTIFIED BY 'L0nd0n2o12';
 
 ## webmaint user
 GRANT SELECT ON *.* TO 'webmaint'@'%' IDENTIFIED BY 'free2stay';
