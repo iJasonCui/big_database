@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>567B4C9A-8177-43EA-BB55-970E0ED75638</string>
+	<key>IDESourceControlProjectName</key>
+	<string>core-background</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>285B0C54-80C6-4AB8-B6ED-D2A93E0115E6</key>
+		<string>https://github.com/justinmfischer/core-background.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>core-background.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>285B0C54-80C6-4AB8-B6ED-D2A93E0115E6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/justinmfischer/core-background.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>285B0C54-80C6-4AB8-B6ED-D2A93E0115E6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>285B0C54-80C6-4AB8-B6ED-D2A93E0115E6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
