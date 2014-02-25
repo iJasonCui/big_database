@@ -1,0 +1,219 @@
+drop table report_db..WebSale2013Nov
+
+--summary
+
+select sum(p.cost) as 'cost', sum(p.tax) as 'tax', sum(p.costUSD) as 'costUSD', sum(p.taxUSD) as 'taxUSD',
+       pt.purchaseTypeId, pt.description as 'paymentType', ct.countryName as 'taxCountry', jt.jurisdictionName as 'taxJurisdiction', cc.cardTypeId
+into report_db..WebSale2013Nov
+from Purchase p, PurchaseType pt, CountryTaxRate ct, JurisdictionTaxRate jt, CreditCard cc 
+where p.purchaseTypeId = pt.purchaseTypeId
+and p.creditCardId *= cc.creditCardId 
+and p.taxCountryId = ct.countryId
+and p.taxCountryId *= jt.countryId
+and p.taxJurisdictionId *= jt.jurisdictionId
+and p.dateCreated >= 'Nov 1 2013' and p.dateCreated < 'Dec 1 2013'
+and p.cost > 0
+and ct.dateExpired is null
+and jt.dateExpired is null
+group by ct.countryName, jt.jurisdictionName, pt.purchaseTypeId, pt.description, cc.cardTypeId
+order by ct.countryName, jt.jurisdictionName, pt.purchaseTypeId, pt.description, cc.cardTypeId
+
+select 
+    cost            ,
+    tax             ,
+    costUSD         ,
+    taxUSD          ,
+    purchaseTypeId  ,
+    paymentType     ,
+    taxCountry      ,
+    taxJurisdiction ,
+    t.cardTypeId,
+    c.cardTypeCode
+ from report_db..WebSale2013Nov t, Accounting..CardType c
+ where t.cardTypeId *= c.cardTypeId
+order by   taxCountry, taxJurisdiction, paymentType, c.cardTypeCode
+
+--######################################
+-- START HERE 
+--######################################
+
+-- Optimal 99944836 - CAD - Web
+-- taxCountry = 'Canada'
+-- cardTypeCode IN ('VI', 'MC')
+SELECT "=================================="
+SELECT "[Optimal 99944836 - CAD - Web] Nov 2013"
+
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t, Accounting..CardType c 
+ WHERE t.cardTypeId = c.cardTypeId
+   AND taxCountry = 'Canada'
+--   AND c.cardTypeCode  IN ('VI', 'MC')    
+--   AND c.cardTypeCode != 'AX'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+-- Optimal 99945299 - USD - Web
+-- taxCountry = 'USA'
+-- cardTypeCode != 'AX'
+SELECT "=================================="
+SELECT "[Optimal 99945299 - USD - Web] Nov 2013"
+SELECT
+    taxJurisdiction ,
+--    taxCountry  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t, Accounting..CardType c 
+ WHERE t.cardTypeId = c.cardTypeId
+   AND taxCountry = 'USA'
+   AND c.cardTypeCode != 'AX'
+GROUP BY taxJurisdiction -- ,taxCountry
+ORDER BY taxJurisdiction -- ,taxCountry
+
+SELECT "=================================="
+SELECT "[Optimal 99943819(99944834) - AUD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  , --taxCountry  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t, Accounting..CardType c 
+ WHERE t.cardTypeId = c.cardTypeId
+   AND taxCountry = 'Australia'
+GROUP BY taxJurisdiction -- ,taxCountry
+ORDER BY taxJurisdiction -- ,taxCountry
+
+SELECT "=================================="
+SELECT "[AMEX 9302369799 - CAD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t, Accounting..CardType c 
+ WHERE t.cardTypeId = c.cardTypeId
+   AND taxCountry = 'Canada'
+   AND c.cardTypeCode = 'AX'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+--"AMEX - USD - Web"
+--"Nov 2013"
+SELECT "=================================="
+SELECT "[AMEX 2070219142- USD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t, Accounting..CardType c 
+ WHERE t.cardTypeId = c.cardTypeId
+   AND taxCountry = 'USA'
+   AND c.cardTypeCode = 'AX'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+-- taxCountry = 'Canada'
+-- PayPal
+SELECT "=================================="
+SELECT "[PayPal - CAD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE taxCountry = 'Canada'
+   AND paymentType = 'PayPal'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+--"PayPal - USD - Web"
+--"Nov 2013"
+SELECT "=================================="
+SELECT "[PayPal - USD - Web] Nov 2013"
+SELECT
+    taxCountry  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE paymentType = 'PayPal'
+   AND taxCountry = 'USA'
+GROUP BY taxCountry
+ORDER BY taxCountry
+
+--"PayPal - AUD - Web"
+--"Nov 2013"
+SELECT "=================================="
+SELECT "[PayPal - AUD - Web] Nov 2013"
+SELECT
+    taxCountry  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE paymentType = 'PayPal'
+   AND taxCountry = 'Australia'
+GROUP BY taxCountry
+ORDER BY taxCountry
+
+-- taxCountry = 'Canada'
+-- paymentType = 'INTERAC'
+SELECT "=================================="
+SELECT "[INTERAC 87184510014 - CAD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE taxCountry = 'Canada'
+   AND paymentType = 'INTERAC'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+-- taxCountry = 'Canada'
+-- paymentType = 'Cash & Money Orders'
+SELECT "==========================================="
+SELECT "[Cash & Money Orders - CAD - Web] Nov 2013"
+SELECT
+    taxJurisdiction  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE taxCountry = 'Canada'
+   AND paymentType = 'MONEY ORDER'
+GROUP BY taxJurisdiction
+ORDER BY taxJurisdiction
+
+--"Cash & Money Orders - USD - Web"
+--"Nov 2013"
+SELECT "=========================================="
+SELECT "[Cash & Money Orders - USD - Web] Nov 2013"
+SELECT
+    taxCountry  ,
+    sum(cost) as cost,
+    sum(tax ) as tax 
+  FROM report_db..WebSale2013Nov t
+ WHERE paymentType = 'MONEY ORDER'
+   AND taxCountry = 'USA'
+GROUP BY taxCountry
+ORDER BY taxCountry
+
+--######################################
+-- STOP HERE 
+--######################################
+
+--detailed transaction
+
+select p.xactionId, p.cost as 'cost', p.tax as 'tax', p.costUSD as 'costUSD', p.taxUSD as 'taxUSD',
+       pt.description as 'paymentType', ct.countryName as 'taxCountry', jt.jurisdictionName as 'taxJurisdiction', cc.cardTypeId, cc.partialCardNum
+into report_db..WebSaleTran2013Nov
+from Purchase p, PurchaseType pt, CountryTaxRate ct, JurisdictionTaxRate jt, CreditCard cc 
+where p.purchaseTypeId = pt.purchaseTypeId
+and p.creditCardId *= cc.creditCardId 
+and p.taxCountryId = ct.countryId
+and p.taxCountryId *= jt.countryId
+and p.taxJurisdictionId *= jt.jurisdictionId
+and p.dateCreated >= 'Nov 1 2013' and p.dateCreated < 'Dec 1 2013'
+and p.cost > 0
+and ct.dateExpired is null
+and jt.dateExpired is null
+
+select * from report_db..WebSaleTran2013Nov
