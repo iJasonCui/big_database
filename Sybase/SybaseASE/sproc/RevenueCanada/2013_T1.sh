@@ -1,12 +1,3 @@
-IF OBJECT_ID('dbo.tsp_getT1Special2012') IS NOT NULL
-BEGIN
-    DROP PROCEDURE dbo.tsp_getT1Special2012
-    IF OBJECT_ID('dbo.tsp_getT1Special2012') IS NOT NULL
-        PRINT '<<< FAILED DROPPING PROCEDURE dbo.tsp_getT1Special2012 >>>'
-    ELSE
-        PRINT '<<< DROPPED PROCEDURE dbo.tsp_getT1Special2012 >>>'
-END
-go
 CREATE PROCEDURE tsp_getT1Special2012
      @T4Box14_line101 numeric(12,2), 
      @RRSP_line208    numeric(12,2), 
@@ -101,14 +92,3 @@ BEGIN
       PRINT "Line 485: %1! " , @line485
            
 END
-/* ### DEFNCOPY: END OF DEFINITION */
-go
-GRANT EXECUTE ON dbo.tsp_getT1Special2012 TO web
-go
-IF OBJECT_ID('dbo.tsp_getT1Special2012') IS NOT NULL
-   PRINT '<<< CREATED PROCEDURE dbo.tsp_getT1Special2012 >>>'
-ELSE
-   PRINT '<<< FAILED CREATING PROCEDURE dbo.tsp_getT1Special2012 >>>'
-go
-EXEC sp_procxmode 'dbo.tsp_getT1Special2012','unchained'
-go
