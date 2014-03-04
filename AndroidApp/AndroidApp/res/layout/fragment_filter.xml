@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="12dip"
+    android:paddingRight="12dip" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="20dip"
+        android:text="BASIC FILTERS"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Show me women in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="Dating"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_blue_light" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Age"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="28 to 33"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_blue_light" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Location"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="withing 80 miles"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_blue_light" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="New Members"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Pictures only"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="20dip"
+        android:text="SAVE YOUR SEARCH"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" />
+
+   
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="12dip" >
+
+        <TextView
+            android:id="@+android:id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Save as"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="Untitled"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+    
+    
+</LinearLayout>
